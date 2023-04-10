@@ -1,0 +1,891 @@
+
+
+
+<html>
+
+
+    <script>
+
+
+        let IP2_News = "Psst... Mondo started the fire..";
+
+
+
+        let Images = 45;
+
+
+        let IP2_Text = [
+            "SAY I'M A NIGGERLOVER",
+            "You're a rapist! You tried to rape me!",            
+            "We love! Our MickeyDees! Quarter Pounders! Extra Cheese!",
+            "HUMPHRY WAS A PSYOP!!!",
+            "YOU'RE GETTING BEATEN FOR THE NIGGERS!",
+            'IP2 Never Wins!',
+            'SCRAM, BiTCH!',
+            'Die in a fire a lil bit',
+            'REMOVE ME! OFF! THE NETWORK!',
+            'NAYYGURRR!',
+            'RANCH, NIGGER!',
+            'Figure it out, lil bruises!',
+            'Figure it out, dood!',
+            "I'M FROM OUGHHKLAND",
+            'AYOOOOO!',
+            'GROPE GANG',
+            'NAYGAARRR!',
+            'Eliot Rodger here!',
+            'C4 has been successfully activated! Bomb detonation countdown successfully started!',
+            'SCRAM!',
+            'OUUGHHHHH',
+            'ERGGHH',
+        ];
+
+    </script>
+
+
+<style>
+
+    html
+    {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    table, td, img
+    {
+        border-style: solid;
+        border-width: 1px;
+        background-color: white;
+    }
+
+    table
+    {
+        width: 50%;
+        display: table;
+        left: 25%;
+        position: relative;
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
+        background: linear-gradient(white,#979797, white);
+        border-radius: 5px;
+        margin-top: 25px;
+    }
+
+    table[id="inactive"]
+    {
+        opacity: .2;
+    }
+
+    th
+    {
+        color: white;
+        text-align: center !important;
+        text-shadow: 0px 1px black;
+        background:  linear-gradient(rgb(157, 157, 157),#666, rgb(20, 23, 26));
+    }
+
+
+    .titleheader
+    {
+        height: 250px;
+    }
+
+    .theader
+    {
+        text-align: left;
+    }
+
+    .title
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: italic;
+        color: white;
+        width: 100%;
+        height: 150px;
+        position: relative;
+        text-align: center;
+        font-size: 50px;
+        line-height: 5;
+        text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
+    }
+
+
+    body
+    {
+        background-image: url("bg.jpg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #3495eb;
+       
+    }
+
+    .sideimg
+    {
+        width: 125px;
+        height: 75px;
+        object-fit: contain;
+    }
+
+
+    .links
+    {
+        font-size: 18px;
+        display: inline;
+        position: absolute;
+        right: 15px;
+    }
+
+    .searchdiv
+    {
+        font-size: 18px;
+        display: inline;
+        position: absolute;
+        right: 15px;
+    }
+
+    .links:before
+    {
+        content: url(search_icns/search.png);
+    }
+
+    .itemtitle
+    {
+        text-decoration: none;
+    }
+
+    .itemtitle:hover
+    {
+        text-decoration: underline;
+    }
+
+    .warning
+    {
+        display: inline;
+        position: relative;
+        left: 25px;
+        bottom: 35px;
+    }
+
+    .info
+    {
+        display: inline;
+        left: 95px;
+        position: relative;
+    }
+
+    .info:before
+    {
+        content: url("site_icons/20.png");
+    }
+
+    .warning:before
+    {
+        content: url("warn.png")
+    }
+
+    .fsearch
+    {
+        display: inline-flex;
+        position: relative;
+        top: 35px;
+    }
+
+    label
+    {
+        background-color: white;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    h1[id='ip2news']
+    {
+        color: white;
+        font-size: 16;
+    }
+
+    h1[id='ip2news']::before
+    {
+        content: url(site_icons/37.png);
+        margin-right: 5px;
+    }
+
+
+    .searchicon
+    {
+        object-fit: contain;
+        border: none;
+        margin-right: 5px;
+        background: none;
+    }
+
+    input[type="text"]
+    {
+        border-style: solid;
+        border-color: gray;
+        border-width: 1;
+        border-radius: 4px;
+        background: linear-gradient(rgb(236, 236, 236),#fff, rgb(236, 236, 236));
+    }
+
+    input[type="submit"]
+    {
+
+        border-radius: 5px;
+
+        /*border-top-left-radius: 0px;*/
+        /*border-bottom-left-radius: 0px;*/
+
+        border-color: #437eca;
+        border-top-color: rgb(67, 126, 202);
+        border-style: solid;
+        background: linear-gradient(white,rgb(240, 240, 240), white);
+        border-top-color: #96b5c2;
+    }
+
+    input[type="submit"]:hover
+    {
+        border-color: rgb(255, 204, 0);
+        border-top-color: rgb(255, 208, 0);
+    }
+
+
+
+    .quickbtn
+    {
+        position: relative;
+        border-width: 1px;
+        padding: 2px;
+        text-decoration: none;
+        color: white;
+        font-family: arial;
+        padding-left: 75px;
+        border-color: #07426c;
+        border-width: 3px;
+        font-weight: bold;
+        text-shadow: 0px 1px black;
+    }
+
+    .quickbtn:hover
+    {
+        background: linear-gradient(rgb(206, 206, 206, .1),#0bc6ffad, rgb(77, 104, 127, .1));
+    }
+
+    #qbtn_end
+    {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+
+    #qbtn_start
+    {
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+    }
+
+    .sidenav
+    {
+        width: 200px;
+        height: 250px;
+        background-color: white;
+        position: absolute;
+        left: 76%;
+    }
+
+
+    .toolbar
+    {
+        width: 475px;
+        padding-left: 25%;
+        padding-top: 15px;
+    }
+
+    .toolbar > a
+    {
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.609);
+    }
+
+    .toolbar >a:before
+    {
+        content: url("site_icons/9.png");
+    }
+
+
+
+    siteicon[icon="epic"]:before
+    {
+        content: url("site_icons/14.png")
+    }
+
+    siteicon[icon="ubi"]:before
+    {
+        content: url("site_icons/31.png")
+    }
+
+    siteicon[icon="origin"]:before
+    {
+        content: url("site_icons/24.png")
+    }
+
+    siteicon[icon="gog"]:before
+    {
+        content: url("site_icons/17.png")
+    }
+
+    siteicon[icon="steam"]:before
+    {
+        content: url("site_icons/29.png")
+    }
+
+    siteicon[icon="ebay"]:before
+    {
+        content: url("site_icons/13.png")
+    }
+
+    siteicon[icon="amz"]:before
+    {
+        content: url("site_icons/6.png")
+    }
+
+    siteicon[icon="anime"]:before
+    {
+        content: url("site_icons/7.png")
+    }
+
+    siteicon[icon="mal"]:before
+    {
+        content: url("site_icons/21.png")
+    }
+
+    siteicon[icon="gml"]:before
+    {
+        content: url("site_icons/16.png")
+    }
+
+    siteicon[icon="cd"]:before
+    {
+        content: url("site_icons/10.png")
+    }
+
+    siteicon[icon="red"]:before
+    {
+        content: url("site_icons/26.png")
+    }
+
+    siteicon[icon="red"]:hover
+    {
+        content: url("site_icons/27.png")
+    }
+
+    siteicon[icon="g"]:before
+    {
+        content: url("search_icns/searchg.png")
+    }
+
+    siteicon[icon="gphoto"]:before
+    {
+        content: url("site_icons/18.png")
+    }
+
+    siteicon[icon="translate"]:before
+    {
+        content: url("site_icons/30.png")
+    }
+
+    siteicon[icon="merc"]:before
+    {
+        content: url("site_icons/23.png")
+    }
+
+    siteicon[icon="manga"]:before
+    {
+        content: url("site_icons/22.png")
+    }
+
+    siteicon[icon="pix"]:before
+    {
+        content: url("site_icons/25.png")
+    }
+
+    siteicon[icon="yt"]:before
+    {
+        content: url("site_icons/32.png")
+    }
+
+    siteicon[icon="4g"]:before
+    {
+        content: url("site_icons/2.png")
+    }
+
+    siteicon[icon="4r9k"]:before
+    {
+        content: url("site_icons/4.png")
+    }
+
+    siteicon[icon="4adv"]:before
+    {
+        content: url("site_icons/1.png")
+    }
+
+    siteicon[icon="4wsg"]:before
+    {
+        content: url("site_icons/5.png")
+    }
+
+    siteicon[icon="4gif"]:before
+    {
+        content: url("site_icons/3.png")
+    }
+
+    siteicon[icon="ggd"]:before
+    {
+        content: url("site_icons/15.png")
+    }
+	
+	siteicon[icon="pclick"]:before
+    {
+        content: url("site_icons/48.png")
+    }
+
+
+</style>
+
+
+
+<head>
+
+    <title>Startpage</title>
+    <h1 class="title">Hello</h1>
+
+    <div class="toolbar">
+
+        <a href="icons.html">Icon Corner</a>
+
+    </div>
+
+</head>
+
+
+
+<body>
+
+    
+
+
+    <table style="border-style: none; background: linear-gradient(rgb(160, 211, 255),#007cd4, rgb(11, 61, 157));">
+
+        <tr>
+
+
+            <td id="tdwbullet" style="background-color: transparent; border-style: none; height: 25px !important;"><img src="site_icons/happyface.png" class="sideimg" id="bulletimg" style="opacity: 1; width: 25px; height: 25px !important;">
+
+
+                <a class="quickbtn" id="qbtn_start" href="https://www.pcgamingwiki.com/wiki/Home" style="padding-left: 35px;" >PCGamingWiki</a>
+                <a class="quickbtn" href="https://howlongtobeat.com" style="padding-left: 25px;">HowLongToBt.</a>
+                <a class="quickbtn" href="https://www.steampeek.hu/" style="padding-left: 35px;">SteamPeek</a>
+                <a class="quickbtn" href="https://docs.google.com/document/d/1CptZNjZotiN9gCjzLB6YJPewE0Q-WnPLN8Yh9F4GWR4/edit" style="padding-left: 25px;" >Backlog</a>
+                <a class="quickbtn" id="qbtn_end" href="https://igdb.com" style="padding-left: 25px;" >IGDB</a>
+
+
+
+                <script>
+                    function tbFocus(tb)
+                    {
+                        tb.setAttribute('style','border-color: transparent !important; box-shadow: 0px 0px 3px black')
+                    }
+
+                    function tbFocusEnd(tb)
+                    {
+                        tb.setAttribute('style','border-color: gray !important; box-shadow: none;')
+                    }
+
+                </script>
+
+                <script>
+                
+                // Set top search bar to search image or web
+
+                    function imgSearchON()
+                    { // isch
+                        document.getElementById('searchType').setAttribute('value','isch')
+                    }
+
+                    function imgSearchOFF()
+                    { // null
+                        document.getElementById('searchType').setAttribute('value','')
+                    }
+
+                </script>
+
+                <div class="searchdiv">
+                    <form class="fsearch" style="top: 0"  method="GET" action="http://google.com/search"  target="_self">
+                        <img class="searchicon" src="misc_img/gsrch.png">
+                          <input type="text" autocomplete="off" id="msearch" name="q" value="" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)" ><br>
+                          <input type="hidden" id="searchType" name="tbm" value="">
+                          <input type="submit" value="Search" onpointerenter="imgSearchOFF()">
+                          <input type="submit" value="i" formaction="http://google.com/search" onpointerenter="imgSearchON()">                      
+                    </form>
+                </div>
+
+
+                <script>
+
+                    var srcCombined = 'site_icons/' + Math.floor(Math.random() * Images + 1) + '.png';
+    
+                    var picture = localStorage.getItem(srcCombined);
+    
+                    var image = document.getElementById('bulletimg');
+
+                    image.setAttribute('src', srcCombined);
+                    image.setAttribute('class','sideimg');
+                    image.setAttribute('style', 'opacity: 1; width: 16px; height: 16px !important;')
+                
+            </script>
+
+
+            <script>document.getElementById('msearch').focus();</script>
+            
+                
+        </tr>
+
+    </table>
+
+
+
+    <table id="inactive">
+
+        <th class="theader">Empty</th>
+
+        <tr>
+            <td><img class="sideimg" src="">       
+        </tr>
+
+    </table>
+    
+    <div class="toolbar">
+        <img src="site_icons/37.png" style="width: 16px; height: 16px; background-color: transparent; border-style: none;"> <a id="ip2txt" href="http://communities.win/c/ip2always/" onmouseover="Ip2HoverIn()" onmouseout="IP2HoverOut()" >IP2 Always Wins!</a>
+        <img src="site_icons/37.png" style="width: 16px; height: 16px; background-color: transparent; border-style: none;"><a href="http://ip2.online">Live</a><a href="http://ip2.network">[ 2 ]</a>
+    </div>
+
+    <div class="toolbar">
+        <h1 id="ip2news">nontent :/</h1>
+    </div>
+
+    <script>
+
+        function Ip2HoverIn()
+        {document.getElementById('ip2txt').innerHTML =  IP2_Text[Math.floor(Math.random() * IP2_Text.length)];};
+
+        function IP2HoverOut()
+        {document.getElementById('ip2txt').innerHTML = 'IP2 Always Wins!'};
+
+
+        // news
+        if (IP2_News != "")
+        {
+            document.getElementById('ip2news').innerHTML = IP2_News;
+            document.getElementById('ip2news').style = "text-shadow: 0px 1px 3px black";
+        }
+        else
+        {
+            document.getElementById('ip2news').innerHTML = "nontent";
+            document.getElementById('ip2news').style = "font-weight: lighter; opacity: 6.25%;"
+        }
+
+    </script>
+
+
+
+
+    <table>
+        <tr>
+            <th class="theader">Research and Multimedia</th>
+        </tr>
+
+        <tr>
+            <td><img class="sideimg" src="thumbs/red.jpg">
+
+                <div class="links">
+                    <siteicon icon="red"></siteicon><a class="itemtitle" href="https://old.reddit.com" style="color: #000; text-decoration: underline; text-decoration-color: #e42c00; text-decoration-thickness: 2px;">Reddit</a>
+                </div>
+                
+        </tr>
+
+        <tr> 
+            <td><img class="sideimg" src="thumbs/yt.jpg">
+                
+                <div class="searchdiv">
+                    <form class="fsearch"  method="GET" action="https://www.youtube.com/results"  target="_self">
+                        <img class="searchicon" src="search_icns/ytsearch.png">
+                          <input type="text" autocomplete="off" id="search_query" name="search_query" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)" value=""><br>
+                          <input type="submit" value="Search">                       
+                    </form>
+                </div>
+
+                <div class="links">
+                    <siteicon icon="yt"></siteicon><a style="font-weight: bold; color: rgb(0, 0, 0);" class="itemtitle" href="https://youtube.com">YouTube</a>
+                    <siteicon icon="yt"></siteicon><a style="font-weight: bold; color: rgb(0, 0, 0);" class="itemtitle" href="https://music.youtube.com/library/playlists">Music</a>
+                </div>
+
+                <p class="warning"> Garbage content.</p>
+                
+        </td>
+           
+        </tr>
+
+        <tr>
+            <td><img class="sideimg" src="thumbs/google.jpg">
+
+                <div class="links">
+                    <siteicon icon="gml"></siteicon><a style="color: rgb(196, 18, 18)" class="itemtitle" href="https://mail.google.com/mail/u/0/h/1ph53qrn3tg4n/?zy=e&view&f=1">Gmail</a>
+                    <siteicon icon="g"></siteicon><a style="color: rgb(49, 49, 49)" class="itemtitle" href="https://google.com">Google</a>
+                    <siteicon icon="gphoto"></siteicon><a style="color: rgb(19, 19, 19)" class="itemtitle" href="https://images.google.com">Images</a>
+                    <siteicon icon="translate"></siteicon><a style="color: rgb(29, 71, 197)" class="itemtitle" href="https://translate.google.com">Translate</a>
+                </div>
+                
+                
+        </tr>
+    </table>
+
+
+    <table>
+        <tr>
+            <th class="theader">Music Discography</th>
+        </tr>
+
+        <tr>
+            <td><img class="sideimg" src="thumbs/dscgs.jpg">
+                <div class="links">
+                    <siteicon icon="cd"></siteicon><a href="https://discogs.com/" class="itemtitle" style="color: rgb(0, 0, 0)">Discogs</a>
+                </div>
+
+                <div class="searchdiv">
+                    <form class="fsearch"  method="GET" action="https://www.discogs.com/search"  target="_self">
+                        <img class="searchicon" src="site_icons/46.png">
+                          <input type="text" autocomplete="off" id="q" name="q" value="" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)"><br>
+                          <input type="submit" value="Find">                       
+                    </form>
+
+                </div>
+
+        </tr>
+
+    </table>
+
+    <table>
+        <tr>
+            <th class="theader">Music Stores</th>
+        </tr>
+
+        <tr>
+            <td><img class="sideimg" src="thumbs/7d.jpg">
+                <div class="links">
+                    <siteicon icon="cd"></siteicon><a href="https://us.7digital.com" class="itemtitle" style="color: rgb(255, 255, 255); background-color: rgb(0, 173, 95);">7Digital</a>
+                </div>
+
+                <div class="searchdiv">
+                    <form class="fsearch"  method="GET" action="https://us.7digital.com/search"  target="_self">
+                        <img class="searchicon" src="search_icns/7d.png">
+                          <input type="text" autocomplete="off" id="q" name="q" value="" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)"><br>
+                          <input type="submit" value="Search">                       
+                    </form>
+                </div>
+
+        </tr>
+
+        <tr>
+            <td><img class="sideimg" src="thumbs/bport.png" style="background-color: black;">
+                <div class="links">
+                    <siteicon icon="cd"></siteicon><a href="https://beatport.com" class="itemtitle" style="color: rgb(20, 241, 97); background-color: rgb(0, 0, 0);">Beatport</a>
+                </div>
+
+                <div class="searchdiv">
+                    <form class="fsearch"  method="GET" action="https://beatport.com/search"  target="_self">
+                        <img class="searchicon" src="search_icns/bp.png">
+                          <input type="text" autocomplete="off" id="q" name="q" value="" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)"><br>
+                          <input type="submit" value="Search">                       
+                    </form>
+                </div>
+
+        </tr>
+
+
+        <tr>
+            <td><img class="sideimg" src="thumbs/qbuz.png">
+                <div class="links">
+                    <siteicon icon="cd"></siteicon><a href="https://qobuz.com" class="itemtitle" style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">Qobuz</a>
+                </div>
+
+                <div class="searchdiv">
+                    <form class="fsearch"  method="GET" action="https://qobuz.com/us-en/search"  target="_self">
+                        <img class="searchicon" src="search_icns/cdr.png">
+                          <input type="text" autocomplete="off" id="q" name="q" value="" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)"><br>
+                          <input type="submit" value="Search">                       
+                    </form>
+                </div>
+
+        </tr>
+
+
+        <tr>
+            <td><img class="sideimg" src="thumbs/jd.PNG" style="background-color: rgb(28, 28, 28);">
+                <div class="links">
+                    <siteicon icon="cd"></siteicon><a href="https://junodownload.com" class="itemtitle" style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); box-shadow: 0px 0px 3px rgb(255, 255, 255); font-weight: lighter; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">JunoDownload</a>
+                </div>
+
+                <div class="searchdiv">
+                    <form class="fsearch"  method="GET" action="https://junodownload.com/search"  target="_self">
+                        <img class="searchicon" src="search_icns/cdr.png">
+                          <input type="submit" value="Search">                       
+                    </form>
+                </div>
+
+        </tr>
+
+
+
+    </table>
+
+
+    <table>
+        <tr>
+            <th class="theader">Anime & Manga</th>
+        </tr>
+
+        <tr>
+            <td><img class="sideimg" src="thumbs/anime.jpg" style="object-fit:cover;">
+                <div class="links">
+                    <siteicon icon="anime"></siteicon><a class="itemtitle" style="color: rgb(113, 20, 164); font-weight: bold;"  href="https://9anime.gs/">9Anime</a>
+                    <siteicon icon="mal"></siteicon><a class="itemtitle" style="color: #26448f; text-decoration: underline;"  href="https://myanimelist.net/">MyAnimeList</a> <a class="itemtitle" style="color: #26448f;"  href="https://myanimelist.net/animelist/Ayyumu">[A]</a> <a class="itemtitle" style="color: #26448f;"  href="https://myanimelist.net/mangalist/Ayyumu">[M]</a>
+                    <siteicon icon="manga"></siteicon><a class="itemtitle" style="color: rgb(211, 95, 0);"  href="https://mangadex.org/my/history">MangaDex</a>
+                    <siteicon icon="pix"></siteicon><a class="itemtitle" style="color: rgb(0, 54, 217)"  href="https://www.pixiv.net/discovery">Pixiv</a>
+                </div>
+        </tr>
+
+    </table>
+
+
+
+
+    <table>
+        <tr>
+            <th class="theader">Deals and Discounts</th>
+        </tr>
+        <tr>
+            <td><img class="sideimg" src="thumbs/xbox.jpg">
+                
+                <div class="searchdiv">
+                    <form class="fsearch"  method="GET" action="https://gg.deals/games/"  target="_self">
+                        <img class="searchicon" src="gg.png">
+                          <input type="text" autocomplete="off" id="title" name="title" value="" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)"><br>
+                          <input type="submit" value="Search">                       
+                    </form>
+                </div>
+
+
+                <div class="links">
+                    <siteicon icon="red"></siteicon><a class="itemtitle" href="https://old.reddit.com/r/GameDeals/" style="color: #000; text-decoration: underline; text-decoration-color: #e42c00; text-decoration-thickness: 2px;">GameDeals</a>
+                    <siteicon icon="ggd"></siteicon><a class="itemtitle" href="https://gg.deals" style="font-weight: 500; color: black;" >GG.deals</a><a class="itemtitle" style="color: black;" href="https://gg.deals/wishlist/recent-deals/"> [Wishlist]</a>
+                </div>
+        </tr>
+    </table>
+
+
+    <table>
+        <tr>
+            <th class="theader">Shopping</th>
+        </tr>
+
+        <tr>
+            <td><img class="sideimg" src="thumbs/amzn.jpg">
+                <div class="links">
+                    <siteicon icon="ebay"></siteicon><a class="itemtitle" style="color: rgb(226, 11, 11)" href="https://ebay.com">ebay</a>
+                    <siteicon icon="amz"></siteicon><a class="itemtitle" style="color: rgb(40, 40, 40)" href="https://amazon.com">Amazon</a>
+                    <siteicon icon="merc"></siteicon><a class="itemtitle" style="color: rgb(11, 129, 226)" href="https://mercari.com">Mercari</a>
+					<siteicon icon="pclick"></siteicon><a class="itemtitle" style="color: #0275d8;" href="https://picclick.com/">PicClick</a>
+                </div>
+                
+        </tr>
+    </table>
+
+
+
+    <table>
+        <tr>
+            <th class="theader">Gaming</th>
+        </tr>
+
+        <tr>
+            <td><img class="sideimg" src="thumbs/pcgaming.jpg">
+                <div class="links">
+                    <siteicon icon="steam"></siteicon><a class="itemtitle" href="https://store.steampowered.com/" style="color: rgb(0, 0, 0);">Steam</a>
+                    <siteicon icon="gog"></siteicon><a class="itemtitle" href="https://gog.com" style="color: rgb(0, 0, 0);" >GOG</a>
+                    <siteicon icon="origin"></siteicon><a class="itemtitle" href="https://origin.com" style="color: rgb(3, 142, 255); font-weight: bold;" >EA</a>
+                    <siteicon icon="ubi"></siteicon><a class="itemtitle" href="https://ubisoft.com" style="color: rgb(0, 115, 255)" >Ubisoft</a>
+                    <siteicon icon="epic"><a class="itemtitle" href="https://store.epicgames.com" style="color: rgb(0, 0, 0);" >Epic</a>
+                </div>
+                
+        </tr>
+
+    </table>
+
+
+
+
+    <table>
+        <tr>
+            <th class="theader">ROMs [ Vimm's Lair ]</th>
+        </tr>
+
+        <tr>
+            <td><img class="sideimg" src="thumbs/cds.jpg">
+
+                <div class="searchdiv">
+
+                    <p class="info">Vimm's Lair</p>
+
+                    <form class="fsearch"  method="GET" action="https://vimm.net/vault/"  target="_self">
+                        <img class="searchicon" src="search_icns/vimm.png">
+                        <input type="hidden" name="p" value="list"><br>
+                          <input type="text" autocomplete="off" id="q" name="q" value="" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)"><br>
+                          <input type="submit" value="Search">                       
+                    </form>
+
+                </div>
+        </tr>
+
+    </table>
+
+
+    <table>
+        <tr>
+            <th class="theader">ROMs [ CDRomance ]</th>
+        </tr>
+
+        <tr>
+            <td><img class="sideimg" src="thumbs/cds.jpg">
+
+                <div class="searchdiv">
+
+                    <p class="info">CDRomance</p>
+
+                    <form class="fsearch"  method="GET" action="https://cdromance.com/"  target="_self">
+                        <img class="searchicon" src="search_icns/cdr.png">
+                        <input type="hidden" name="p" value="list"><br>
+                          <input type="text" autocomplete="off" id="s" name="s" value="" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)"><br>
+                          <input type="submit" value="Search">                       
+                    </form>
+                    
+                </div>
+        </tr>
+
+    </table>
+
+
+
+</body>
+
+
+<footer style="margin-top: 575px">
+</footer>
+
+
+</html>
