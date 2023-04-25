@@ -7,8 +7,8 @@
     <script>
 
 
-        let IP2_News = "Psst... Mondo started the fire..";
-
+        let IP2_News = "Back to our regularly scheduled programming.";
+        let contentOverload = false;
 
 
         let Images = 45;
@@ -79,6 +79,7 @@
         text-align: center !important;
         text-shadow: 0px 1px black;
         background:  linear-gradient(rgb(157, 157, 157),#666, rgb(20, 23, 26));
+        scroll-margin: 100px;
     }
 
 
@@ -308,6 +309,52 @@
         content: url("site_icons/9.png");
     }
 
+    .categorynav
+    {
+        margin-left: 11vw;
+        width: 25%;
+        height: 125px;
+        background-color: white;
+    }
+
+
+    .gobackup
+    {
+        background-color: transparent;
+        border-color: transparent;
+        position: relative;
+        padding-left: 48%;
+        padding-top: 25px;
+        width: 75px;
+        height: 75px;
+    }
+
+
+
+    .catnavitm[id="res"]::before
+    {
+        content: url("misc_img/search.png");
+        display: flex;
+    }
+
+    .catnavitm[id="mus"]::before
+    {
+        content: url("misc_img/mus.png");
+        display: flex;
+    }
+
+    .catnavitm[id="shop"]::before
+    {
+        content: url("misc_img/shop.png");
+        display: flex;
+    }
+
+    .catnavitm[id="gam"]::before
+    {
+        content: url("misc_img/game.png");
+        display: flex;
+    }
+
 
 
     siteicon[icon="epic"]:before
@@ -453,7 +500,7 @@
 <head>
 
     <title>Startpage</title>
-    <h1 class="title">Hello</h1>
+    <h1 id="stitle" class="title">Hello</h1>
 
     <div class="toolbar">
 
@@ -549,16 +596,43 @@
     </table>
 
 
+    <script>
+        function nav(cat)
+        {
+            if (cat == "research")
+            {
+                document.getElementById("catnav-res").scrollIntoView();
+            }
 
-    <table id="inactive">
+            else if (cat == "music")
+            {
+                document.getElementById("catnav-mus").scrollIntoView();
+            }
 
-        <th class="theader">Empty</th>
+            else if (cat == "shopping")
+            {
+                document.getElementById("catnav-shop").scrollIntoView();
+            }
 
+            else if (cat == "gaming")
+            {
+                document.getElementById("catnav-gam").scrollIntoView();
+            }
+
+        }
+    </script>
+
+
+    <table class="categorynav">
         <tr>
-            <td><img class="sideimg" src="">       
+            <td class="catnavitm" id="res" onclick="nav('research')">Research</td>
+            <td class="catnavitm" id="mus" onclick="nav('music')">Music</td>
+            <td class="catnavitm" id="shop" onclick="nav('shopping')">Shopping</td>
+            <td class="catnavitm" id="gam" onclick="nav('gaming')">Gaming</td>
         </tr>
-
     </table>
+    
+
     
     <div class="toolbar">
         <img src="site_icons/37.png" style="width: 16px; height: 16px; background-color: transparent; border-style: none;"> <a id="ip2txt" href="http://communities.win/c/ip2always/" onmouseover="Ip2HoverIn()" onmouseout="IP2HoverOut()" >IP2 Always Wins!</a>
@@ -568,6 +642,7 @@
     <div class="toolbar">
         <h1 id="ip2news">nontent :/</h1>
     </div>
+
 
     <script>
 
@@ -597,7 +672,7 @@
 
     <table>
         <tr>
-            <th class="theader">Research and Multimedia</th>
+            <th id="catnav-res" class="theader">Research and Multimedia</th>
         </tr>
 
         <tr>
@@ -648,7 +723,7 @@
 
     <table>
         <tr>
-            <th class="theader">Music Discography</th>
+            <th id="catnav-mus" class="theader">Music Discography</th>
         </tr>
 
         <tr>
@@ -694,7 +769,7 @@
         <tr>
             <td><img class="sideimg" src="thumbs/bport.png" style="background-color: black;">
                 <div class="links">
-                    <siteicon icon="cd"></siteicon><a href="https://beatport.com" class="itemtitle" style="color: rgb(20, 241, 97); background-color: rgb(0, 0, 0);">Beatport</a>
+                    <siteicon icon="cd"></siteicon><a href="https://beatport.com" class="itemtitle" style="color: rgb(161, 216, 10); background-color: rgb(0, 0, 0);">Beatport</a>
                 </div>
 
                 <div class="searchdiv">
@@ -716,7 +791,7 @@
 
                 <div class="searchdiv">
                     <form class="fsearch"  method="GET" action="https://qobuz.com/us-en/search"  target="_self">
-                        <img class="searchicon" src="search_icns/cdr.png">
+                        <img class="searchicon" src="search_icns/qbz.png">
                           <input type="text" autocomplete="off" id="q" name="q" value="" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)"><br>
                           <input type="submit" value="Search">                       
                     </form>
@@ -733,7 +808,7 @@
 
                 <div class="searchdiv">
                     <form class="fsearch"  method="GET" action="https://junodownload.com/search"  target="_self">
-                        <img class="searchicon" src="search_icns/cdr.png">
+                        <img class="searchicon" src="search_icns/jd.png">
                           <input type="submit" value="Search">                       
                     </form>
                 </div>
@@ -767,7 +842,7 @@
 
     <table>
         <tr>
-            <th class="theader">Deals and Discounts</th>
+            <th id="catnav-shop" class="theader">Deals and Discounts</th>
         </tr>
         <tr>
             <td><img class="sideimg" src="thumbs/xbox.jpg">
@@ -810,7 +885,7 @@
 
     <table>
         <tr>
-            <th class="theader">Gaming</th>
+            <th id="catnav-gam" class="theader">Gaming</th>
         </tr>
 
         <tr>
@@ -878,6 +953,39 @@
         </tr>
 
     </table>
+
+
+    <script>
+        function gobackup()
+        {
+            document.getElementById("stitle").scrollIntoView();
+        }
+    </script>
+
+    <img draggable="false" class="gobackup" onclick="gobackup()" src="misc_img/gobackup.png">
+
+
+    <script>
+
+        let i = 0;
+
+        function myLoop() {         //  create a loop function
+            setTimeout(function() {   //  call a 3s setTimeout when the loop is called
+                document.getElementById("ip2news").style.color = '#'+(0x1000000+Math.random()*0xffffff).toString(16).substr(1,6);
+        i++;                    //  increment the counter
+        if (i < 10) {           //  if the counter < 10, call the loop function
+            myLoop();
+            i = 0;             //  ..  again which will trigger another 
+         }                       //  ..  setTimeout()
+  }, 5)
+}
+
+if (contentOverload)
+{
+    myLoop();
+}     
+        
+    </script>
 
 
 
