@@ -7,7 +7,7 @@
     <script>
 
 
-        let IP2_News = "Back to our regularly scheduled programming.";
+        let IP2_News = "MER MER MER MER MERRRRRRRR!";
         let contentOverload = false;
 
 
@@ -15,7 +15,28 @@
 
 
         let IP2_Text = [
-            'redacted',
+            "SAY I'M A NIGGERLOVER",
+            "You're a rapist! You tried to rape me!",            
+            "We love! Our MickeyDees! Quarter Pounders! Extra Cheese!",
+            "HUMPHRY WAS A PSYOP!!!",
+            "YOU'RE GETTING BEATEN FOR THE NIGGERS!",
+            'IP2 Never Wins!',
+            'SCRAM, BiTCH!',
+            'Die in a fire a lil bit',
+            'REMOVE ME! OFF! THE NETWORK!',
+            'NAYYGURRR!',
+            'RANCH, NIGGER!',
+            'Figure it out, lil bruises!',
+            'Figure it out, dood!',
+            "I'M FROM OUGHHKLAND",
+            'AYOOOOO!',
+            'GROPE GANG',
+            'NAYGAARRR!',
+            'Eliot Rodger here!',
+            'C4 has been successfully activated! Bomb detonation countdown successfully started!',
+            'SCRAM!',
+            'OUUGHHHHH',
+            'ERGGHH',
         ];
 
     </script>
@@ -205,7 +226,7 @@
         background: linear-gradient(rgb(236, 236, 236),#fff, rgb(236, 236, 236));
     }
 
-    input[type="submit"]
+    input[type="submit"], input[type="reset"]
     {
 
         border-radius: 5px;
@@ -220,7 +241,7 @@
         border-top-color: #96b5c2;
     }
 
-    input[type="submit"]:hover
+    input[type="submit"]:hover, input[type="reset"]:hover
     {
         border-color: rgb(255, 204, 0);
         border-top-color: rgb(255, 208, 0);
@@ -660,6 +681,32 @@
                 <div class="links">
                     <siteicon icon="red"></siteicon><a class="itemtitle" href="https://old.reddit.com" style="color: #000; text-decoration: underline; text-decoration-color: #e42c00; text-decoration-thickness: 2px;">Reddit</a>
                 </div>
+
+                <script>
+                    function gotoSubreddit()
+                    {
+                        window.location.href = 'https://old.reddit.com/r/' + document.getElementById("subreddit").value;
+                    }
+                </script>
+
+                <script>
+                    function RedditInputPress(e)
+                    {
+                        if (e.keyCode ==13){
+                            e.preventDefault(); // Ensure it is only this code that runs
+                            gotoSubreddit();
+                        }
+                    }
+                </script>
+
+                <div class="searchdiv">
+                    <form class="fsearch"  method="GET" action="#"  target="_self">
+                        <img class="searchicon" src="site_icons/26.png">
+                        <label>r/</label>  
+                        <input type="text" onkeypress="RedditInputPress(event)" autocomplete="off" id="subreddit" name="r" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)" value=""><br>
+                          <input type="reset" value="Search" onclick="return gotoSubreddit()">                
+                    </form>
+                </div>
                 
         </tr>
 
@@ -785,12 +832,44 @@
                     <siteicon icon="cd"></siteicon><a href="https://junodownload.com" class="itemtitle" style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); box-shadow: 0px 0px 3px rgb(255, 255, 255); font-weight: lighter; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">JunoDownload</a>
                 </div>
 
+                <script>
+                    function junosearch()
+                    {
+                        if (document.getElementById('junotype').value == "Artist")
+                        {
+                            window.location.href = "https://www.junodownload.com/search/?facet[mirror_artist_facetm][]=" + document.getElementById('tbJuno').value
+                        }
+                        else if(document.getElementById('junotype').value == "Release")
+                        {
+                            window.location.href = "https://www.junodownload.com/search/?q[all][]=" + document.getElementById('tbJuno').value
+                        }
+                    }
+                </script>
+            
+
                 <div class="searchdiv">
-                    <form class="fsearch"  method="GET" action="https://junodownload.com/search"  target="_self">
-                        <img class="searchicon" src="search_icns/jd.png">
-                          <input type="submit" value="Search">                       
-                    </form>
+                    
+                    <div class="searchdiv">
+                        <form class="fsearch"  method="GET" action="#"  target="_self">
+                            <img class="searchicon" src="site_icons/14.png">
+                              <select id="junotype"><option selected="selected">Release</option><option>Artist</option> </select>
+                              <input type="text" onkeypress="junoInputPress(event)" on autocomplete="off" id="tbJuno" name="r" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)" value=""><br>
+                              <input type="reset" value="Search" onclick="return junosearch()">                
+                        </form>
+                    </div>
+
                 </div>
+
+                <script>
+                    function junoInputPress(e)
+                    {
+                        if (e.keyCode ==13){
+                            e.preventDefault(); // Ensure it is only this code that runs
+                            junosearch();
+                        }
+                    }
+                </script>
+
 
         </tr>
 
