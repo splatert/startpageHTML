@@ -3,51 +3,12 @@
 
 <html>
 
-
-    <script>
-
-
-        let IP2_News = "";
-        let contentOverload = false;
-
-
-        let Images = 45;
-
-
-        let IP2_Text = [
-            "BILLY JOHN IS A STUPID BITCH! FUCK YOU, BILLY!",
-			"Chotto Matte?",
-            "Hookay, buddy",
-            "YOU FOCKIN' WEIRDO",
-            "GNOMESAYIN?",
-            "SAY I'M A NIGGERLOVER",
-            "You're a rapist! You tried to rape me!",            
-            "We love! Our MickeyDees! Quarter Pounders! Extra Cheese!",
-            "HUMPHRY WAS A PSYOP!!!",
-            "YOU'RE GETTING BEATEN FOR THE NIGGERS!",
-            'IP2 Never Wins!',
-            'SCRAM, BiTCH!',
-            'Die in a fire a lil bit',
-            'REMOVE ME! OFF! THE NETWORK!',
-            'NAYYGURRR!',
-            'RANCH, NIGGER!',
-            'Figure it out, lil bruises!',
-            'Figure it out, dood!',
-            "I'M FROM OUGHHKLAND",
-            'AYOOOOO!',
-            'GROPE GANG',
-            'NAYGAARRR!',
-            'Eliot Rodger here!',
-            'C4 has been successfully activated! Bomb detonation countdown successfully started!',
-            'SCRAM!',
-            'OUUGHHHHH',
-            'ERGGHH',
-        ];
-
-    </script>
-
-
 <style>
+
+    :root
+    {
+        --button1: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 43%, rgba(227,227,227,1) 45%, rgba(227,227,227,1) 100%);
+    }
 
     html
     {
@@ -198,18 +159,6 @@
         margin-right: 5px;
     }
 
-    h1[id='ip2news']
-    {
-        color: white;
-        font-size: 16;
-    }
-
-    h1[id='ip2news']::before
-    {
-        content: url(site_icons/37.png);
-        margin-right: 5px;
-    }
-
 
     .searchicon
     {
@@ -234,7 +183,7 @@
         border-color: #437eca;
         border-top-color: rgb(67, 126, 202);
         border-style: solid;
-        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 43%, rgba(227,227,227,1) 45%, rgba(227,227,227,1) 100%);
+        background: var(--button1);
         border-top-color: #96b5c2;
         transition: all 0.125s ease-in-out;
     }
@@ -250,23 +199,24 @@
     {
         margin-top: 25px;
         margin-bottom: -5px;
-        width: 750px;
-        height: 35px;
-        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.503));
-        box-shadow: 0px 1px 2px black;
+        width: 50%;
+        border-style: solid;
+        border-color: white;
+        border-width: 1px;
     }
 
     .PCGR_Item
     {
-        margin-top: 5px;
-        border-bottom-style: solid;
-        padding: 2px;
         text-decoration: none;
         color: white;
         font-family: arial;
         border-color: #ffffff;
         border-width: 3px;
         text-shadow: 0px 1px 2px black;
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 15px;
+        margin-top: 15px;
     }
 
     .PCGR_Item:hover
@@ -276,27 +226,27 @@
 
     .PCGR_Item:nth-of-type(n+1):hover
     {
-        border-bottom-color: #5093ff;
+        color: #5093ff;
     }
     .PCGR_Item:nth-of-type(n+2):hover
     {
-        border-bottom-color: #ff5050;
+        color: #ff5050;
     }
     .PCGR_Item:nth-of-type(n+3):hover
     {
-        border-bottom-color: #50ff82;
+        color: #50ff82;
     }
     .PCGR_Item:nth-of-type(n+4):hover
     {
-        border-bottom-color: #a250ff;
+        color: #a250ff;
     }
     .PCGR_Item:nth-of-type(n+5):hover
     {
-        border-bottom-color: #50ffff;
+        color: #50ffff;
     }
     .PCGR_Item:nth-of-type(n+6):hover
     {
-        border-bottom-color: #ffdf50;
+        color: #ffdf50;
     }
 
     .sidenav
@@ -549,7 +499,7 @@
 
     .searchKeyword
     {
-        background-color: gray;
+        background: linear-gradient(lightgray, #8c8c8c 13px, gray 0px, #4d4d4d);
         color: white;
         text-shadow: 0px 1px 1px black;
         display: inline-block;
@@ -560,6 +510,15 @@
 
     .searchKeyword:before
     {content: '🔍︎ '}
+
+    #isrch
+    {
+        background: var(--button1);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 35px;
+        background-color: white;
+    }
 
 
 </style>
@@ -596,35 +555,25 @@
                         {
                             tb.setAttribute('style','border-color: gray !important; box-shadow: none;')
                         }
-                    </script>
-    
-                    <script>
-                    
-                    // Set top search bar to search image or web
-    
-                        function imgSearchON()
-                        { // isch
-                            document.getElementById('searchType').setAttribute('value','isch')
-                        }
-    
-                        function imgSearchOFF()
-                        { // null
-                            document.getElementById('searchType').setAttribute('value','')
-                        }
-    
-                    </script>            
+                    </script>          
             </tr>
     
         </table>
     
+        <script>
+            function imageSearch()
+            {
+                window.location.href = "https://www.google.com/search?q=" + document.getElementById("msearch").value + "&tbm=isch"
+            }
+        </script>
 
         <div class="searchdiv" style="float: none !important">
             <form class="fsearch"  method="GET" action="http://google.com/search"  target="_self">
                 <img class="searchicon" src="misc_img/gsrch.png">
                   <input type="text" style="width: 325px !important; height: 35px !important; border-radius: 0px !important;" autocomplete="off" id="msearch" name="q" value="" ><br>
                   <input type="hidden" id="searchType" name="tbm" value="" style="border-radius: 0px !important;">
-                  <input type="submit" value="Search" onpointerenter="imgSearchOFF()" style="border-radius: 0px !important;">
-                  <input type="submit" value="i" formaction="http://google.com/search" onpointerenter="imgSearchON()" style="border-radius: 0px !important; border-left-style: none !important;">                      
+                  <input type="submit" value="Search" style="border-radius: 0px !important;">
+                  <input type="reset" id="isrch" onclick="imageSearch()" value="i" style="border-radius: 0px !important; border-left-style: none !important;">                      
             </form>
 
             <script>
@@ -647,7 +596,11 @@
                         case 3:
                             temp = document.getElementById("msearch").value;
                             keyword = 'inurl:' + temp;
-                            break;  
+                            break; 
+                        case 4:
+                            temp = document.getElementById("msearch").value;
+                            keyword = '"' + temp + '"';
+                            break; 
                     }
 
                     document.getElementById("msearch").value = keyword;
@@ -659,6 +612,7 @@
                 <a class="searchKeyword" id="skw1" onclick="addKeywordToSearchBox(1)">Reddit</a>
                 <a class="searchKeyword" id="skw1" onclick="addKeywordToSearchBox(2)">intitle</a>
                 <a class="searchKeyword" id="skw1" onclick="addKeywordToSearchBox(3)">inurl</a>
+                <a class="searchKeyword" id="skw1" onclick="addKeywordToSearchBox(4)">quotes</a>
             </div>
 
         </div>
@@ -703,36 +657,9 @@
     
         
         <div class="toolbar">
-            <img src="site_icons/37.png" style="width: 16px; height: 16px; background-color: transparent; border-style: none;"> <a id="ip2txt" href="http://communities.win/c/ip2always/" onmouseover="Ip2HoverIn()" onmouseout="IP2HoverOut()" >IP2 Always Wins!</a>
+            <img src="site_icons/37.png" style="width: 16px; height: 16px; background-color: transparent; border-style: none;"> <a id="ip2txt" href="http://communities.win/c/ip2always/" onmouseover="Ip2HoverIn()" onmouseout="IP2HoverOut()" >IP2 Forum</a>
             <img src="site_icons/37.png" style="width: 16px; height: 16px; background-color: transparent; border-style: none;"><a href="http://ip2.online">Live</a><a href="http://ip2.network">[ 2 ]</a>
         </div>
-    
-        <div class="toolbar">
-            <h1 id="ip2news">nontent :/</h1>
-        </div>
-    
-    
-        <script>
-    
-            function Ip2HoverIn()
-            {document.getElementById('ip2txt').innerHTML =  IP2_Text[Math.floor(Math.random() * IP2_Text.length)];};
-    
-            function IP2HoverOut()
-            {document.getElementById('ip2txt').innerHTML = 'IP2 Always Wins!'};
-    
-            // news
-            if (IP2_News != "")
-            {
-                document.getElementById('ip2news').innerHTML = IP2_News;
-                document.getElementById('ip2news').style = "text-shadow: 0px 1px 3px black";
-            }
-            else
-            {
-                document.getElementById('ip2news').innerHTML = "nontent";
-                document.getElementById('ip2news').style = "font-weight: lighter; opacity: 6.25%;"
-            }
-    
-        </script>
     
     
     
@@ -790,7 +717,6 @@
     
                     <div class="links">
                         <siteicon icon="yt"></siteicon><a style="font-weight: bold; color: rgb(0, 0, 0);" class="itemtitle" href="https://youtube.com">YouTube</a>
-                        <siteicon icon="yt"></siteicon><a style="font-weight: bold; color: rgb(0, 0, 0);" class="itemtitle" href="https://music.youtube.com/library/playlists">Music</a>
                     </div>
                     
             </td>
@@ -1101,29 +1027,6 @@
         {
             document.getElementById("stitle").scrollIntoView();
         }
-    </script>
-
-
-    <script>
-        let i = 0;
-        function myLoop()
-        {         //  create a loop function
-            setTimeout(function()
-            {   //  call a 3s setTimeout when the loop is called
-                document.getElementById("ip2news").style.transition = "all 0.125s ease-in-out;"
-                document.getElementById("ip2news").style.color = '#'+(0x1000000+Math.random()*0xffffff).toString(16).substr(1,6);
-                i++;                    //  increment the counter
-                if (i < 10)
-                {           //  if the counter < 10, call the loop function
-                    myLoop();
-                    i = 0;             //  ..  again which will trigger another 
-                }                      //  ..  setTimeout()
-  }, 5)
-}
-if (contentOverload)
-{
-    myLoop();
-}           
     </script>
 
 
