@@ -43,7 +43,7 @@
         color: white;
         text-align: center !important;
         text-shadow: 0px 1px black;
-        background:  linear-gradient(rgb(157, 157, 157),#666, rgb(20, 23, 26));
+        background:  linear-gradient(rgb(129, 129, 129) 0%, rgb(62, 62, 62) 50%, rgb(48, 48, 48) 51%, rgb(79, 79, 79) 100%);
         scroll-margin: 100px;
     }
 
@@ -294,6 +294,13 @@
         height: 75px;
     }
 
+    .gobackup[detached="true"]
+    {
+        position: fixed;
+        left: 49%;
+        bottom: 15%;
+    }
+
 
     .catnavitm:hover
     {
@@ -535,6 +542,7 @@
 <body>
 
     <div class="topbar">
+        <a class="topbar-item" style="margin-left: 5px; float: left; color: white" href="https://docs.google.com/document/d/1UC9FdevTrmNt6wbYQcQo9m8rQOxF9Xqt4JFzx7aZeCM/edit?usp=sharing">Essential Software</a>
         <a class="topbar-item" style="content: url(site_icons/16.png);" href="https://mail.google.com/mail/u/0/h/1ph53qrn3tg4n/?zy=e&view&f=1"></a>
         <a class="topbar-item" style="content: url(site_icons/50.png);" href="https://live.com/"></a>
     </div>
@@ -620,26 +628,40 @@
         <script>document.getElementById('msearch').focus();</script>
     
         <script>
+
+            async function glowOut(section)
+            {
+                document.getElementById(section).style = "background: #0087ff !important;"
+                    
+                    setTimeout(() => {
+                        document.getElementById(section).style = "transition: 1s all ease-in-out; background: white !important" 
+                    1000});
+            }
+
             function nav(cat)
             {
                 if (cat == "research")
                 {
-                    document.getElementById("catnav-res").scrollIntoView();
+                    scrollToElement("catnav-res");
+                    glowOut("research-section");
                 }
     
                 else if (cat == "music")
                 {
-                    document.getElementById("catnav-mus").scrollIntoView();
+                    scrollToElement("catnav-mus");
+                    glowOut("music-section");
                 }
     
                 else if (cat == "shopping")
                 {
-                    document.getElementById("catnav-shop").scrollIntoView();
+                    scrollToElement("catnav-shop");
+                    glowOut("shopping-section");
                 }
     
                 else if (cat == "gaming")
                 {
-                    document.getElementById("catnav-gam").scrollIntoView();
+                    scrollToElement("shopping-section");
+                    glowOut("gaming-section");
                 }
             }
         </script>
@@ -650,21 +672,21 @@
                 <td class="catnavitm" id="res" onclick="nav('research')">Research</td>
                 <td class="catnavitm" id="mus" onclick="nav('music')">Music</td>
                 <td class="catnavitm" id="shop" onclick="nav('shopping')">Shopping</td>
-                <td class="catnavitm" id="gam" onclick="nav('shopping')">Gaming</td>
+                <td class="catnavitm" id="gam" onclick="nav('gaming')">Gaming</td>
             </tr>
         </table>
         
     
         
         <div class="toolbar">
-            <img src="site_icons/37.png" style="width: 16px; height: 16px; background-color: transparent; border-style: none;"> <a id="ip2txt" href="http://communities.win/c/ip2always/" onmouseover="Ip2HoverIn()" onmouseout="IP2HoverOut()" >IP2 Forum</a>
+            <img src="site_icons/37.png" style="width: 16px; height: 16px; background-color: transparent; border-style: none;"> <a id="ip2txt" href="http://communities.win/c/ip2always/" >IP2 Forum</a>
             <img src="site_icons/37.png" style="width: 16px; height: 16px; background-color: transparent; border-style: none;"><a href="http://ip2.online">Live</a><a href="http://ip2.network">[ 2 ]</a>
         </div>
     
     
     
     
-        <table>
+        <table id="research-section">
             <tr>
                 <th id="catnav-res" class="theader">Research and Multimedia</th>
             </tr>
@@ -737,7 +759,7 @@
         </table>
     
     
-        <table>
+        <table id="discogs-section">
             <tr>
                 <th id="catnav-mus" class="theader">Music Discography</th>
             </tr>
@@ -761,7 +783,7 @@
     
         </table>
     
-        <table>
+        <table id="music-section">
             <tr>
                 <th class="theader">Music Stores</th>
             </tr>
@@ -816,7 +838,7 @@
             </tr>
     
     
-            <tr>
+            <tr id="catnav-shop">
                 <td><img class="sideimg" src="thumbs/jd.PNG" style="background-color: rgb(28, 28, 28);">
                     <div class="links">
                         <siteicon icon="cd"></siteicon><a href="https://junodownload.com" class="itemtitle" style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); box-shadow: 0px 0px 3px rgb(255, 255, 255); font-weight: lighter; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">JunoDownload</a>
@@ -868,7 +890,7 @@
         </table>
     
     
-        <table>
+        <table id="anime-section">
             <tr>
                 <th class="theader">Anime & Manga</th>
             </tr>
@@ -886,33 +908,7 @@
         </table>
     
     
-    
-    
-        <table>
-            <tr>
-                <th id="catnav-shop" class="theader">Deals and Discounts</th>
-            </tr>
-            <tr>
-                <td><img class="sideimg" src="thumbs/xbox.jpg">
-                    
-                    <div class="searchdiv">
-                        <form class="fsearch"  method="GET" action="https://gg.deals/games/"  target="_self">
-                            <img class="searchicon" src="gg.png">
-                              <input type="text" autocomplete="off" id="title" name="title" value="" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)"><br>
-                              <input type="submit" value="Search">                       
-                        </form>
-                    </div>
-    
-    
-                    <div class="links">
-                        <siteicon icon="red"></siteicon><a class="itemtitle" href="https://old.reddit.com/r/GameDeals/" style="color: #000; text-decoration: underline; text-decoration-color: #e42c00; text-decoration-thickness: 2px;">GameDeals</a>
-                        <siteicon icon="ggd"></siteicon><a class="itemtitle" href="https://gg.deals" style="font-weight: 500; color: black;" >GG.deals</a><a class="itemtitle" style="color: black;" href="https://gg.deals/wishlist/recent-deals/"> [Wishlist]</a>
-                    </div>
-            </tr>
-        </table>
-    
-    
-        <table>
+        <table id="shopping-section">
             <tr>
                 <th class="theader">Shopping</th>
             </tr>
@@ -920,10 +916,10 @@
             <tr>
                 <td><img class="sideimg" src="thumbs/amzn.jpg">
                     <div class="links">
-                        <siteicon icon="ebay"></siteicon><a class="itemtitle" style="color: rgb(226, 11, 11)" href="https://ebay.com">ebay</a>
-                        <siteicon icon="amz"></siteicon><a class="itemtitle" style="color: rgb(40, 40, 40)" href="https://amazon.com">Amazon</a>
-                        <siteicon icon="merc"></siteicon><a class="itemtitle" style="color: rgb(11, 129, 226)" href="https://mercari.com">Mercari</a>
                         <siteicon icon="pclick"></siteicon><a class="itemtitle" style="color: #0275d8;" href="https://picclick.com/">PicClick</a>
+                        <siteicon icon="merc"></siteicon><a class="itemtitle" style="color: rgb(11, 129, 226)" href="https://mercari.com">Mercari</a>
+                        <siteicon icon="amz"></siteicon><a class="itemtitle" style="color: rgb(40, 40, 40)" href="https://amazon.com">Amazon</a>
+                        <siteicon icon="ebay"></siteicon><a class="itemtitle" style="color: rgb(226, 11, 11)" href="https://ebay.com">ebay</a>
                     </div>
                     
             </tr>
@@ -931,9 +927,9 @@
     
     
     
-        <table>
+        <table id="gaming-section">
             <tr>
-                <th id="catnav-gam" class="theader">Gaming</th>
+                <th class="theader" id="gaming-section">Gaming</th>
             </tr>
     
             <tr>
@@ -951,9 +947,6 @@
                     <div class="links">
                         <siteicon icon="steam"></siteicon><a class="itemtitle" href="https://store.steampowered.com/" style="color: rgb(0, 0, 0);">Steam</a>
                         <siteicon icon="gog"></siteicon><a class="itemtitle" href="https://gog.com" style="color: rgb(0, 0, 0);" >GOG</a>
-                        <siteicon icon="origin"></siteicon><a class="itemtitle" href="https://origin.com" style="color: rgb(3, 142, 255); font-weight: bold;" >EA</a>
-                        <siteicon icon="ubi"></siteicon><a class="itemtitle" href="https://ubisoft.com" style="color: rgb(0, 115, 255)" >Ubisoft</a>
-                        <siteicon icon="epic"><a class="itemtitle" href="https://store.epicgames.com" style="color: rgb(0, 0, 0);" >Epic</a>
                     </div>
     
                     <div class="searchdiv">
@@ -970,9 +963,29 @@
         </table>
     
     
+        <table id="deals-section">
+            <tr>
+                <th class="theader">Deals and Discounts</th>
+            </tr>
+            <tr>
+                <td><img class="sideimg" src="thumbs/xbox.jpg">
+                    
+                    <div class="searchdiv">
+                        <form class="fsearch"  method="GET" action="https://gg.deals/games/"  target="_self">
+                            <img class="searchicon" src="gg.png">
+                              <input type="text" autocomplete="off" id="title" name="title" value="" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)"><br>
+                              <input type="submit" value="Search">                       
+                        </form>
+                    </div>
+                    <div class="links">
+                        <siteicon icon="red"></siteicon><a class="itemtitle" href="https://old.reddit.com/r/GameDeals/" style="color: #000; text-decoration: underline; text-decoration-color: #e42c00; text-decoration-thickness: 2px;">GameDeals</a>
+                        <siteicon icon="ggd"></siteicon><a class="itemtitle" href="https://gg.deals" style="font-weight: 500; color: black;" >GG.deals</a><a class="itemtitle" style="color: black;" href="https://gg.deals/wishlist/recent-deals/"> [Wishlist]</a>
+                    </div>
+            </tr>
+        </table>
     
     
-        <table>
+        <table id="piracy-section">
             <tr>
                 <th class="theader">ROMs [ Vimm's Lair ]</th>
             </tr>
@@ -1017,7 +1030,7 @@
     
         </table>
 
-        <img draggable="false" class="gobackup" onclick="gobackup()" src="misc_img/gobackup.png">
+        <img detached="false" draggable="false" id="gobackup" class="gobackup" onclick="gobackup()" src="misc_img/gobackup.png">
 
     </center>
 
@@ -1025,7 +1038,14 @@
     <script>
         function gobackup()
         {
-            document.getElementById("stitle").scrollIntoView();
+            document.getElementById("gobackup").setAttribute("detached", false)
+            scrollToElement("stitle");
+        }
+
+        function scrollToElement(elementToScrollTo)
+        {
+            document.getElementById("gobackup").setAttribute("detached", true)
+            document.getElementById(elementToScrollTo).scrollIntoView();
         }
     </script>
 
