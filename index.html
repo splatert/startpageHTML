@@ -588,56 +588,40 @@
 
                 document.getElementById("msearch").oninput = function()
                 {
-                    var slashR = document.getElementById("msearch").value;
-                    if (slashR.endsWith("/r"))
+                    var query = document.getElementById("msearch").value;
+                    if (query.endsWith('/r'))
                     {
                         var searchText = document.getElementById("msearch").value;
                         var searchTextEdited = searchText.substring(0, searchText.length - 3);
-
                         document.getElementById("msearch").value = searchTextEdited + " site:reddit.com";
-
                     }
-                }
-
-            </script>
-
-
-            <script>
-                function addKeywordToSearchBox(kw)
-                {
-                    let keywordId = kw;
-                    let keyword = "";
-                    let temp = "";
-
-                    switch(keywordId)
+                    else if (query.endsWith('"'))
                     {
-                        case 1:
-                            temp = document.getElementById("msearch").value;
-                            keyword = temp + " site:reddit.com";
-                            break;
-                        case 2:
-                            temp = document.getElementById("msearch").value;
-                            keyword = 'intitle:"' + temp + '"';
-                            break;
-                        case 3:
-                            temp = document.getElementById("msearch").value;
-                            keyword = 'inurl:' + temp;
-                            break; 
-                        case 4:
-                            temp = document.getElementById("msearch").value;
-                            keyword = '"' + temp + '"';
-                            break; 
+                        var searchText = document.getElementById("msearch").value;
+                        document.getElementById("msearch").value = '"' + searchText;
+                    }
+                    else if (query.endsWith('/url'))
+                    {
+                        var searchText = document.getElementById("msearch").value;
+                        var searchTextEdited = searchText.substring(0, searchText.length - 5);
+                        document.getElementById("msearch").value = 'inurl:' + searchTextEdited;
+                    }
+                    else if (query.endsWith("/t"))
+                    {
+                        var searchText = document.getElementById("msearch").value;
+                        var searchTextEdited = searchText.substring(0, searchText.length - 3);
+                        document.getElementById("msearch").value = 'intitle:"' + searchTextEdited + '"';
                     }
 
-                    document.getElementById("msearch").value = keyword;
 
                 }
+
             </script>
             
             <div class="searchKeywordList">
-                <a class="searchKeyword" id="skw1" onclick="addKeywordToSearchBox(1)">Reddit (/r)</a>
-                <a class="searchKeyword" id="skw1" onclick="addKeywordToSearchBox(2)">intitle</a>
-                <a class="searchKeyword" id="skw1" onclick="addKeywordToSearchBox(3)">inurl</a>
+                <a class="searchKeyword" id="skw1">Reddit (/r)</a>
+                <a class="searchKeyword" id="skw1">intitle (/t)</a>
+                <a class="searchKeyword" id="skw1">inurl (/url)</a>
             </div>
 
         </div>
