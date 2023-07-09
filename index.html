@@ -506,11 +506,10 @@
 
     .searchKeyword
     {
-        background: linear-gradient(lightgray, #8c8c8c 13px, gray 0px, #4d4d4d);
         color: white;
         text-shadow: 0px 1px 1px black;
         display: inline-block;
-        width: 75px;
+        width: 125px;
         height: 25px;
         font-size: 17px;
     }
@@ -584,6 +583,25 @@
                   <input type="reset" id="isrch" onclick="imageSearch()" value="i" style="border-radius: 0px !important; border-left-style: none !important;">                      
             </form>
 
+
+            <script>
+
+                document.getElementById("msearch").oninput = function()
+                {
+                    var slashR = document.getElementById("msearch").value;
+                    if (slashR.endsWith("/r"))
+                    {
+                        var searchText = document.getElementById("msearch").value;
+                        var searchTextEdited = searchText.substring(0, searchText.length - 3);
+
+                        document.getElementById("msearch").value = searchTextEdited + " site:reddit.com";
+
+                    }
+                }
+
+            </script>
+
+
             <script>
                 function addKeywordToSearchBox(kw)
                 {
@@ -617,10 +635,9 @@
             </script>
             
             <div class="searchKeywordList">
-                <a class="searchKeyword" id="skw1" onclick="addKeywordToSearchBox(1)">Reddit</a>
+                <a class="searchKeyword" id="skw1" onclick="addKeywordToSearchBox(1)">Reddit (/r)</a>
                 <a class="searchKeyword" id="skw1" onclick="addKeywordToSearchBox(2)">intitle</a>
                 <a class="searchKeyword" id="skw1" onclick="addKeywordToSearchBox(3)">inurl</a>
-                <a class="searchKeyword" id="skw1" onclick="addKeywordToSearchBox(4)">quotes</a>
             </div>
 
         </div>
