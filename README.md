@@ -7,3 +7,4 @@ My own ideal startpage
 - /t -> adds 'intitle:' to search query.
 - /url -> adds 'inurl:' to search query.
 - Ending the query with a quotation mark (") will also add one to the start of it.
+- /d -> starts the search phrase with 'definition of'
