@@ -618,6 +618,12 @@
                         var searchTextEdited = searchText.substring(0, searchText.length - 3);
                         document.getElementById("msearch").value = 'definition of ' + searchTextEdited;
                     }
+                    else if (query.endsWith("/i"))
+                    {
+                        var searchText = document.getElementById("msearch").value;
+                        var searchTextEdited = searchText.substring(0, searchText.length - 3);
+                        window.location.href = "https://www.google.com/search?q=" + searchTextEdited + "&tbm=isch"
+                    }
 
 
                 }
@@ -629,6 +635,7 @@
                 <a class="searchKeyword" id="skw1">intitle (/t)</a>
                 <a class="searchKeyword" id="skw1">inurl (/url)</a>
                 <a class="searchKeyword" id="skw1">definition (/d)</a>
+                <a class="searchKeyword" id="skw1">img (/i)</a>
             </div>
 
         </div>
