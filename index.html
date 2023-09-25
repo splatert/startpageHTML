@@ -544,6 +544,7 @@
         <a class="topbar-item" style="margin-left: 5px; float: left; color: white" href="https://docs.google.com/document/d/1UC9FdevTrmNt6wbYQcQo9m8rQOxF9Xqt4JFzx7aZeCM/edit?usp=sharing">Essential Software</a>
         <a class="topbar-item" style="content: url(site_icons/16.png);" href="https://mail.google.com/mail/u/0/h/1ph53qrn3tg4n/?zy=e&view&f=1"></a>
         <a class="topbar-item" style="content: url(site_icons/50.png);" href="https://live.com/"></a>
+        <a class="topbar-item" style="content: url(site_icons/51.png);" href="rblx.html"></a>
     </div>
 
     <center>
@@ -586,6 +587,12 @@
 
             <script>
 
+                function googleIt()
+                {
+                    var query = document.getElementById("msearch").value;
+                    window.location.href = "https://www.google.com/search?q=" + query
+                }
+
                 document.getElementById("msearch").oninput = function()
                 {
                     var query = document.getElementById("msearch").value;
@@ -594,29 +601,34 @@
                         var searchText = document.getElementById("msearch").value;
                         var searchTextEdited = searchText.substring(0, searchText.length - 3);
                         document.getElementById("msearch").value = searchTextEdited + " site:reddit.com";
+                        googleIt()
                     }
                     else if (query.endsWith('"'))
                     {
                         var searchText = document.getElementById("msearch").value;
                         document.getElementById("msearch").value = '"' + searchText;
+                        googleIt()
                     }
                     else if (query.endsWith('/url'))
                     {
                         var searchText = document.getElementById("msearch").value;
                         var searchTextEdited = searchText.substring(0, searchText.length - 5);
                         document.getElementById("msearch").value = 'inurl:' + searchTextEdited;
+                        googleIt()
                     }
                     else if (query.endsWith("/t"))
                     {
                         var searchText = document.getElementById("msearch").value;
                         var searchTextEdited = searchText.substring(0, searchText.length - 3);
                         document.getElementById("msearch").value = 'intitle:"' + searchTextEdited + '"';
+                        googleIt()
                     }
                     else if (query.endsWith("/d"))
                     {
                         var searchText = document.getElementById("msearch").value;
                         var searchTextEdited = searchText.substring(0, searchText.length - 3);
                         document.getElementById("msearch").value = 'definition of ' + searchTextEdited;
+                        googleIt()
                     }
                     else if (query.endsWith("/i"))
                     {
@@ -887,7 +899,7 @@
             <tr>
                 <td><img class="sideimg" src="thumbs/anime.jpg" style="object-fit:cover;">
                     <div class="links">
-                        <siteicon icon="anime"></siteicon><a class="itemtitle" style="color: rgb(113, 20, 164); font-weight: bold;"  href="https://9anime.gs/">9Anime</a>
+                        <siteicon icon="anime"></siteicon><a class="itemtitle" style="color: rgb(113, 20, 164); font-weight: bold;"  href="https://aniwave.to/">Aniwave</a>
                         <siteicon icon="mal"></siteicon><a class="itemtitle" style="color: #26448f; text-decoration: underline;"  href="https://myanimelist.net/">MyAnimeList</a> <a class="itemtitle" style="color: #26448f;"  href="https://myanimelist.net/animelist/Ayyumu">[A]</a> <a class="itemtitle" style="color: #26448f;"  href="https://myanimelist.net/mangalist/Ayyumu">[M]</a>
                         <siteicon icon="manga"></siteicon><a class="itemtitle" style="color: rgb(211, 95, 0);"  href="https://mangadex.org/my/history">MangaDex</a>
                         <siteicon icon="pix"></siteicon><a class="itemtitle" style="color: rgb(0, 54, 217)"  href="https://www.pixiv.net/discovery">Pixiv</a>
