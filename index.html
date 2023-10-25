@@ -7,7 +7,13 @@
 
     :root
     {
+        --default-header-color: #444;
         --button1: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 43%, rgba(227,227,227,1) 45%, rgba(227,227,227,1) 100%);
+    }
+
+    a
+    {
+        color: rgb(0, 60, 198);
     }
 
     html
@@ -17,7 +23,6 @@
 
     table, td, img
     {
-        border-style: solid;
         border-width: 1px;
         background-color: white;
     }
@@ -28,7 +33,7 @@
         display: table;
         position: relative;
         box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
-        background: linear-gradient(white,#979797, white);
+        background: var(--default-header-color);
         border-radius: 5px;
         margin-top: 25px;
     }
@@ -36,15 +41,6 @@
     table[id="inactive"]
     {
         opacity: .2;
-    }
-
-    th
-    {
-        color: white;
-        text-align: center !important;
-        text-shadow: 0px 1px black;
-        background:  linear-gradient(rgb(129, 129, 129) 0%, rgb(62, 62, 62) 50%, rgb(48, 48, 48) 51%, rgb(79, 79, 79) 100%);
-        scroll-margin: 100px;
     }
 
 
@@ -55,6 +51,7 @@
 
     .theader
     {
+        color: white;
         text-align: left;
     }
 
@@ -75,7 +72,7 @@
 
     body
     {
-        background-image: url("bg.jpg");
+        background-image: url("bg/fall.jpg");
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
@@ -109,7 +106,7 @@
 
     .links:before
     {
-        content: url(search_icns/search.png);
+        content: url(icns_srch/search.png);
     }
 
     .itemtitle
@@ -139,7 +136,7 @@
 
     .info:before
     {
-        content: url("site_icons/20.png");
+        content: url("icns_mini/20.png");
     }
 
     .warning:before
@@ -170,11 +167,16 @@
 
     input[type="text"]
     {
-        border-style: solid;
-        border-color: gray;
         border-width: 1;
         border-radius: 4px;
         background: linear-gradient(180deg, rgba(227,227,227,1) 0%, rgba(255,255,255,1) 9%, rgba(244,244,244,1) 98%, rgba(241,241,241,1) 100%);
+    }
+
+    #catnav-title
+    {
+        color: white;
+        margin: 0;
+        display: table-caption;
     }
 
     input[type="submit"], input[type="reset"]
@@ -199,10 +201,11 @@
     {
         margin-top: 25px;
         margin-bottom: -5px;
-        width: 50%;
+        width: 25%;
         border-style: solid;
         border-color: white;
         border-width: 1px;
+        border-radius: 5px;
     }
 
     .PCGR_Item
@@ -273,13 +276,13 @@
 
     .toolbar >a:before
     {
-        content: url("site_icons/9.png");
+        content: url("icns_mini/9.png");
     }
 
     .categorynav
     {
         width: 25%;
-        height: 125px;
+        height: 100px;
         background-color: white;
     }
 
@@ -302,6 +305,12 @@
     }
 
 
+    .catnavitm > img
+    {
+        width: 96px;
+        height: 96px;
+    }
+
     .catnavitm:hover
     {
         background-color: rgb(224, 226, 255);
@@ -316,25 +325,25 @@
 
     .catnavitm[id="res"]::before
     {
-        content: url("misc_img/search.png");
+        content: url("img_misc/search.png");
         display: flex;
     }
 
     .catnavitm[id="mus"]::before
     {
-        content: url("misc_img/mus.png");
+        content: url("img_misc/mus.png");
         display: flex;
     }
 
     .catnavitm[id="shop"]::before
     {
-        content: url("misc_img/shop.png");
+        content: url("img_misc/shop.png");
         display: flex;
     }
 
     .catnavitm[id="gam"]::before
     {
-        content: url("misc_img/game.png");
+        content: url("img_misc/game.png");
         display: flex;
     }
 
@@ -342,137 +351,137 @@
 
     siteicon[icon="epic"]:before
     {
-        content: url("site_icons/14.png")
+        content: url("icns_mini/14.png")
     }
 
     siteicon[icon="ubi"]:before
     {
-        content: url("site_icons/31.png")
+        content: url("icns_mini/31.png")
     }
 
     siteicon[icon="origin"]:before
     {
-        content: url("site_icons/24.png")
+        content: url("icns_mini/24.png")
     }
 
     siteicon[icon="gog"]:before
     {
-        content: url("site_icons/17.png")
+        content: url("icns_mini/17.png")
     }
 
     siteicon[icon="steam"]:before
     {
-        content: url("site_icons/29.png")
+        content: url("icns_mini/29.png")
     }
 
     siteicon[icon="ebay"]:before
     {
-        content: url("site_icons/13.png")
+        content: url("icns_mini/13.png")
     }
 
     siteicon[icon="amz"]:before
     {
-        content: url("site_icons/6.png")
+        content: url("icns_mini/6.png")
     }
 
     siteicon[icon="anime"]:before
     {
-        content: url("site_icons/7.png")
+        content: url("icns_mini/7.png")
     }
 
     siteicon[icon="mal"]:before
     {
-        content: url("site_icons/21.png")
+        content: url("icns_mini/21.png")
     }
 
     siteicon[icon="gml"]:before
     {
-        content: url("site_icons/16.png")
+        content: url("icns_mini/16.png")
     }
 
     siteicon[icon="cd"]:before
     {
-        content: url("site_icons/10.png")
+        content: url("icns_mini/10.png")
     }
 
     siteicon[icon="red"]:before
     {
-        content: url("site_icons/26.png")
+        content: url("icns_mini/26.png")
     }
 
     siteicon[icon="red"]:hover
     {
-        content: url("site_icons/27.png")
+        content: url("icns_mini/27.png")
     }
 
     siteicon[icon="g"]:before
     {
-        content: url("search_icns/searchg.png")
+        content: url("icns_srch/searchg.png")
     }
 
     siteicon[icon="gphoto"]:before
     {
-        content: url("site_icons/18.png")
+        content: url("icns_mini/18.png")
     }
 
     siteicon[icon="translate"]:before
     {
-        content: url("site_icons/30.png")
+        content: url("icns_mini/30.png")
     }
 
     siteicon[icon="merc"]:before
     {
-        content: url("site_icons/23.png")
+        content: url("icns_mini/23.png")
     }
 
     siteicon[icon="manga"]:before
     {
-        content: url("site_icons/22.png")
+        content: url("icns_mini/22.png")
     }
 
     siteicon[icon="pix"]:before
     {
-        content: url("site_icons/25.png")
+        content: url("icns_mini/25.png")
     }
 
     siteicon[icon="yt"]:before
     {
-        content: url("site_icons/32.png")
+        content: url("icns_mini/32.png")
     }
 
     siteicon[icon="4g"]:before
     {
-        content: url("site_icons/2.png")
+        content: url("icns_mini/2.png")
     }
 
     siteicon[icon="4r9k"]:before
     {
-        content: url("site_icons/4.png")
+        content: url("icns_mini/4.png")
     }
 
     siteicon[icon="4adv"]:before
     {
-        content: url("site_icons/1.png")
+        content: url("icns_mini/1.png")
     }
 
     siteicon[icon="4wsg"]:before
     {
-        content: url("site_icons/5.png")
+        content: url("icns_mini/5.png")
     }
 
     siteicon[icon="4gif"]:before
     {
-        content: url("site_icons/3.png")
+        content: url("icns_mini/3.png")
     }
 
     siteicon[icon="ggd"]:before
     {
-        content: url("site_icons/15.png")
+        content: url("icns_mini/15.png")
     }
 	
 	siteicon[icon="pclick"]:before
     {
-        content: url("site_icons/48.png")
+        content: url("icns_mini/48.png")
     }
 
 
@@ -542,9 +551,8 @@
 
     <div class="topbar">
         <a class="topbar-item" style="margin-left: 5px; float: left; color: white" href="https://docs.google.com/document/d/1UC9FdevTrmNt6wbYQcQo9m8rQOxF9Xqt4JFzx7aZeCM/edit?usp=sharing">Essential Software</a>
-        <a class="topbar-item" style="content: url(site_icons/16.png);" href="https://mail.google.com/mail/u/0/h/1ph53qrn3tg4n/?zy=e&view&f=1"></a>
-        <a class="topbar-item" style="content: url(site_icons/50.png);" href="https://live.com/"></a>
-        <a class="topbar-item" style="content: url(site_icons/51.png);" href="rblx.html"></a>
+        <a class="topbar-item" style="content: url(icns_mini/16.png);" href="https://gmail.com/"></a>
+        <a class="topbar-item" style="content: url(icns_mini/50.png);" href="https://live.com/"></a>
     </div>
 
     <center>
@@ -577,11 +585,8 @@
 
         <div class="searchdiv" style="float: none !important">
             <form class="fsearch"  method="GET" action="http://google.com/search"  target="_self">
-                <img class="searchicon" src="misc_img/gsrch.png">
-                  <input type="text" style="width: 325px !important; height: 35px !important; border-radius: 0px !important;" autocomplete="off" id="msearch" name="q" value="" ><br>
-                  <input type="hidden" id="searchType" name="tbm" value="" style="border-radius: 0px !important;">
-                  <input type="submit" value="Search" style="border-radius: 0px !important;">
-                  <input type="reset" id="isrch" onclick="imageSearch()" value="i" style="border-radius: 0px !important; border-left-style: none !important;">                      
+                  <input type="text" style="width: 325px !important; height: 35px !important; border-radius: 15px !important;" autocomplete="off" id="msearch" name="q" value="" ><br>
+                  <input type="hidden" id="searchType" name="tbm" value="" style="border-radius: 15px !important;">
             </form>
 
 
@@ -661,7 +666,7 @@
                 document.getElementById(section).style = "background: #0087ff !important;"
                     
                     setTimeout(() => {
-                        document.getElementById(section).style = "transition: 1s all ease-in-out; background: white !important" 
+                        document.getElementById(section).style = "transition: 1s all ease-in-out; background: var(--default-header-color) !important" 
                     1000});
             }
 
@@ -694,7 +699,7 @@
         </script>
     
     
-        <table class="categorynav" style="margin-top: 5px !important;">
+        <table class="categorynav" style="margin-top: 5px !important; display: none;">
             <tr>
                 <td class="catnavitm" id="res" onclick="nav('research')">Research</td>
                 <td class="catnavitm" id="mus" onclick="nav('music')">Music</td>
@@ -737,7 +742,7 @@
     
                     <div class="searchdiv">
                         <form class="fsearch"  method="GET" action="#"  target="_self">
-                            <img class="searchicon" src="site_icons/26.png">
+                            <img class="searchicon" src="icns_mini/26.png">
                             <label>r/</label>  
                             <input type="text" onkeypress="RedditInputPress(event)" autocomplete="off" id="subreddit" name="r" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)" value=""><br>
                               <input type="reset" value="Search" onclick="return gotoSubreddit()">                
@@ -762,7 +767,7 @@
     
         <table id="discogs-section">
             <tr>
-                <th id="catnav-mus" class="theader">Music Discography</th>
+                <th class="theader" id="catnav-mus">Music Discography</th>
             </tr>
     
             <tr>
@@ -771,9 +776,9 @@
                         <siteicon icon="cd"></siteicon><a href="https://discogs.com/" class="itemtitle" style="color: rgb(0, 0, 0)">Discogs</a>
                     </div>
     
-                    <div class="searchdiv">
+                    <div class="searchdiv" >
                         <form class="fsearch"  method="GET" action="https://www.discogs.com/search"  target="_self">
-                            <img class="searchicon" src="site_icons/46.png">
+                            <img class="searchicon" src="icns_mini/46.png">
                               <input type="text" autocomplete="off" id="q" name="q" value="" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)"><br>
                               <input type="submit" value="Find">                       
                         </form>
@@ -784,256 +789,83 @@
     
         </table>
     
-        <table id="music-section">
+        <style>
+        </style>
+
+        <table class="categorynav" style="margin-top: 25px !important;">
             <tr>
-                <th class="theader">Music Stores</th>
+                <td class="catnavitm" id="cn-7d"> <img src="icns_square/ico-7d.png" onclick="ss_chooseWebsite('7d')"> <div>7Digital</div> </td>
+                <td class="catnavitm" id="cn-bp"> <img src="icns_square/ico-bp.png" onclick="ss_chooseWebsite('bp')"> <div>Beatport</div> </td>
+                <td class="catnavitm" id="cn-qb"> <img src="icns_square/ico-qb.png" onclick="ss_chooseWebsite('qb')"> <div>Qobuz</div>  </td>
+                <td class="catnavitm" id="cn-jd"> <img src="icns_square/ico-jd.jpg" onclick="ss_chooseWebsite('jd')"> <div>JunoDownload</div> </td>
             </tr>
-    
-            <tr>
-                <td><img class="sideimg" src="thumbs/7d.jpg">
-                    <div class="links">
-                        <siteicon icon="cd"></siteicon><a href="https://us.7digital.com" class="itemtitle" style="color: rgb(255, 255, 255); background-color: rgb(0, 173, 95);">7Digital</a>
-                    </div>
-    
-                    <div class="searchdiv">
-                        <form class="fsearch"  method="GET" action="https://us.7digital.com/search"  target="_self">
-                            <img class="searchicon" src="search_icns/7d.png">
-                              <input type="text" autocomplete="off" id="q" name="q" value="" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)"><br>
-                              <input type="submit" value="Search">                       
-                        </form>
-                    </div>
-    
-            </tr>
-    
-            <tr>
-                <td><img class="sideimg" src="thumbs/bport.png" style="background-color: black;">
-                    <div class="links">
-                        <siteicon icon="cd"></siteicon><a href="https://beatport.com" class="itemtitle" style="color: rgb(161, 216, 10); background-color: rgb(0, 0, 0);">Beatport</a>
-                    </div>
-    
-                    <div class="searchdiv">
-                        <form class="fsearch"  method="GET" action="https://beatport.com/search"  target="_self">
-                            <img class="searchicon" src="search_icns/bp.png">
-                              <input type="text" autocomplete="off" id="q" name="q" value="" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)"><br>
-                              <input type="submit" value="Search">                       
-                        </form>
-                    </div>
-    
-            </tr>
-    
-    
-            <tr>
-                <td><img class="sideimg" src="thumbs/qbuz.png">
-                    <div class="links">
-                        <siteicon icon="cd"></siteicon><a href="https://qobuz.com" class="itemtitle" style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">Qobuz</a>
-                    </div>
-    
-                    <div class="searchdiv">
-                        <form class="fsearch"  method="GET" action="https://qobuz.com/us-en/search"  target="_self">
-                            <img class="searchicon" src="search_icns/qbz.png">
-                              <input type="text" autocomplete="off" id="q" name="q" value="" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)"><br>
-                              <input type="submit" value="Search">                       
-                        </form>
-                    </div>
-    
-            </tr>
-    
-    
-            <tr id="catnav-shop">
-                <td><img class="sideimg" src="thumbs/jd.PNG" style="background-color: rgb(28, 28, 28);">
-                    <div class="links">
-                        <siteicon icon="cd"></siteicon><a href="https://junodownload.com" class="itemtitle" style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); box-shadow: 0px 0px 3px rgb(255, 255, 255); font-weight: lighter; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">JunoDownload</a>
-                    </div>
-    
-                    <script>
-                        function junosearch()
-                        {
-                            if (document.getElementById('junotype').value == "Artist")
-                            {
-                                window.location.href = "https://www.junodownload.com/search/?facet[mirror_artist_facetm][]=" + document.getElementById('tbJuno').value
-                            }
-                            else if(document.getElementById('junotype').value == "Release")
-                            {
-                                window.location.href = "https://www.junodownload.com/search/?q[all][]=" + document.getElementById('tbJuno').value
-                            }
-                        }
-                    </script>
-                
-    
-                    <div class="searchdiv">
-                        
-                        <div class="searchdiv">
-                            <form class="fsearch"  method="GET" action="#"  target="_self">
-                                <img class="searchicon" src="site_icons/10.png">
-                                  <select id="junotype"><option selected="selected">Release</option><option>Artist</option> </select>
-                                  <input type="text" onkeypress="junoInputPress(event)" on autocomplete="off" id="tbJuno" name="r" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)" value=""><br>
-                                  <input type="reset" value="Search" onclick="return junosearch()">                
-                            </form>
-                        </div>
-    
-                    </div>
-    
-                    <script>
-                        function junoInputPress(e)
-                        {
-                            if (e.keyCode ==13){
-                                e.preventDefault(); // Ensure it is only this code that runs
-                                junosearch();
-                            }
-                        }
-                    </script>
-    
-    
-            </tr>
-    
-    
-    
         </table>
-    
-    
-        <table id="anime-section">
+
+        <style>
+            .catnavitm-option
+            {
+                color: #26448f;
+            }
+        </style>
+
+        <table class="categorynav" style="margin-top: 25px !important;">
             <tr>
-                <th class="theader">Anime & Manga</th>
-            </tr>
-    
-            <tr>
-                <td><img class="sideimg" src="thumbs/anime.jpg" style="object-fit:cover;">
-                    <div class="links">
-                        <siteicon icon="anime"></siteicon><a class="itemtitle" style="color: rgb(113, 20, 164); font-weight: bold;"  href="https://aniwave.to/">Aniwave</a>
-                        <siteicon icon="mal"></siteicon><a class="itemtitle" style="color: #26448f; text-decoration: underline;"  href="https://myanimelist.net/">MyAnimeList</a> <a class="itemtitle" style="color: #26448f;"  href="https://myanimelist.net/animelist/Ayyumu">[A]</a> <a class="itemtitle" style="color: #26448f;"  href="https://myanimelist.net/mangalist/Ayyumu">[M]</a>
-                        <siteicon icon="manga"></siteicon><a class="itemtitle" style="color: rgb(211, 95, 0);"  href="https://mangadex.org/my/history">MangaDex</a>
-                        <siteicon icon="pix"></siteicon><a class="itemtitle" style="color: rgb(0, 54, 217)"  href="https://www.pixiv.net/discovery">Pixiv</a>
-                    </div>
-            </tr>
-    
-        </table>
-    
-    
-        <table id="shopping-section">
-            <tr>
-                <th class="theader">Shopping</th>
-            </tr>
-    
-            <tr>
-                <td><img class="sideimg" src="thumbs/amzn.jpg">
-                    <div class="links">
-                        <siteicon icon="pclick"></siteicon><a class="itemtitle" style="color: #0275d8;" href="https://picclick.com/">PicClick</a>
-                        <siteicon icon="merc"></siteicon><a class="itemtitle" style="color: rgb(11, 129, 226)" href="https://mercari.com">Mercari</a>
-                        <siteicon icon="amz"></siteicon><a class="itemtitle" style="color: rgb(40, 40, 40)" href="https://amazon.com">Amazon</a>
-                        <siteicon icon="ebay"></siteicon><a class="itemtitle" style="color: rgb(226, 11, 11)" href="https://ebay.com">ebay</a>
-                    </div>
-                    
+                <td class="catnavitm" id=""> <img src="icns_square/ico-anime.png" onclick="ss_chooseWebsite('anime')"> <div>Watch Anime</div> </td>
+                <td class="catnavitm" id=""> <img src="icns_square/ico-mal.png" onclick="ss_chooseWebsite('mal')"> <p style="margin: 0">MAL <a class="catnavitm-option" href="https://myanimelist.net/animelist/Ayyumu">[A]</a> <a class="catnavitm-option" href="https://myanimelist.net/mangalist/Ayyumu">[M]</a></p> </td>
+                <td class="catnavitm" id=""> <img src="icns_square/ico-md.jpeg" onclick="ss_chooseWebsite('md')"> <div>MangaDex</div> </td>
+                <td class="catnavitm" id=""> <img src="icns_square/ico-px.png" onclick="ss_chooseWebsite('px')"> <div>Pixiv</div> </td>
             </tr>
         </table>
     
     
+        <table class="categorynav" style="margin-top: 25px !important;">
+            <tr>
+                <td class="catnavitm" id=""> <img src="icns_square/ico-pc.png" onclick="ss_chooseWebsite('pc')"> <div>PicClick</div> </td>
+                <td class="catnavitm" id=""> <img src="icns_square/ico-me.jpg" onclick="ss_chooseWebsite('me')"> <div>Mercari</div> </td>
+                <td class="catnavitm" id=""> <img src="icns_square/ico-amz.png" onclick="ss_chooseWebsite('amz')"> <div>Amazon</div>  </td>
+                <td class="catnavitm" id=""> <img src="icns_square/ico-eb.png" onclick="ss_chooseWebsite('eb')"> <div>ebay</div> </td>
+                <td class="catnavitm" id=""> <img src="icns_square/ico-ggd.jpg" onclick="ss_chooseWebsite('ggd')"> <div>gg.deals</div> <a class="catnavitm-option" href="https://gg.deals/wishlist/recent-deals/">Wishlist</a> </td>
+
+            </tr>
+        </table>
+
     
         <table id="gaming-section">
-            <tr>
-                <th class="theader" id="gaming-section">Gaming</th>
-            </tr>
     
             <tr>
-
                 <div class="PCGamingResources">
-                    <a class="PCGR_Item" id="qbtn_start" href="https://www.pcgamingwiki.com/wiki/Home" style="padding-left: 25px;" >PCGamingWiki</a>
-                    <a class="PCGR_Item" href="https://howlongtobeat.com" style="padding-left: 35px;">HowLongToBt.</a>
-                    <a class="PCGR_Item" href="https://www.steampeek.hu/" style="padding-left: 35px;">SteamPeek</a>
-                    <a class="PCGR_Item" href="https://protondb.com/" style="padding-left: 35px;">ProtonDb</a>
-                    <a class="PCGR_Item" href="https://docs.google.com/document/d/1CptZNjZotiN9gCjzLB6YJPewE0Q-WnPLN8Yh9F4GWR4/edit" style="padding-left: 35px;" >Backlog</a>
-                    <a class="PCGR_Item" id="qbtn_end" href="https://igdb.com" style="padding-left: 35px;" >IGDB</a>
+                    <a class="PCGR_Item" href="https://docs.google.com/document/d/1CptZNjZotiN9gCjzLB6YJPewE0Q-WnPLN8Yh9F4GWR4/edit" >View Backlog</a>
                 </div>
-
-                <td><img class="sideimg" src="thumbs/pcgaming.jpg">
-                    <div class="links">
-                        <siteicon icon="steam"></siteicon><a class="itemtitle" href="https://store.steampowered.com/" style="color: rgb(0, 0, 0);">Steam</a>
-                        <siteicon icon="gog"></siteicon><a class="itemtitle" href="https://gog.com" style="color: rgb(0, 0, 0);" >GOG</a>
-                    </div>
-    
-                    <div class="searchdiv">
-                        <form class="fsearch"  method="GET" action="https://protondb.com/search"  target="_self">
-                            <img class="searchicon" src="search_icns/pro.png">
-                              <label>Proton </label><input type="text" autocomplete="off" id="q" name="q" value="" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)"><br>
-                              <input type="submit" value="Search">                       
-                        </form>
-                    </div>
-    
-                    
-            </tr>
-    
-        </table>
-    
-    
-        <table id="deals-section">
-            <tr>
-                <th class="theader">Deals and Discounts</th>
-            </tr>
-            <tr>
-                <td><img class="sideimg" src="thumbs/xbox.jpg">
-                    
-                    <div class="searchdiv">
-                        <form class="fsearch"  method="GET" action="https://gg.deals/games/"  target="_self">
-                            <img class="searchicon" src="gg.png">
-                              <input type="text" autocomplete="off" id="title" name="title" value="" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)"><br>
-                              <input type="submit" value="Search">                       
-                        </form>
-                    </div>
-                    <div class="links">
-                        <siteicon icon="red"></siteicon><a class="itemtitle" href="https://old.reddit.com/r/GameDeals/" style="color: #000; text-decoration: underline; text-decoration-color: #e42c00; text-decoration-thickness: 2px;">GameDeals</a>
-                        <siteicon icon="ggd"></siteicon><a class="itemtitle" href="https://gg.deals" style="font-weight: 500; color: black;" >GG.deals</a><a class="itemtitle" style="color: black;" href="https://gg.deals/wishlist/recent-deals/"> [Wishlist]</a>
-                    </div>
-            </tr>
-        </table>
-    
-    
-        <table id="piracy-section">
-            <tr>
-                <th class="theader">ROMs [ Vimm's Lair ]</th>
-            </tr>
-    
-            <tr>
-                <td><img class="sideimg" src="thumbs/cds.jpg">
-    
-                    <div class="searchdiv">
-                        <form class="fsearch"  method="GET" action="https://vimm.net/vault/"  target="_self">
-                            <img class="searchicon" src="search_icns/vimm.png">
-                            <input type="hidden" name="p" value="list"><br>
-                            <label>Vimm's Lair</label>
-                              <input type="text" autocomplete="off" id="q" name="q" value="" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)"><br>
-                              <input type="submit" value="Search">                       
-                        </form>
-    
-                    </div>
-            </tr>
-    
-        </table>
-    
-    
-        <table>
-            <tr>
-                <th class="theader">ROMs [ CDRomance ]</th>
-            </tr>
-    
-            <tr>
-                <td><img class="sideimg" src="thumbs/cds.jpg">
-    
-                    <div class="searchdiv">
-                        <form class="fsearch"  method="GET" action="https://cdromance.com/"  target="_self">
-                            <img class="searchicon" src="search_icns/cdr.png">
-                            <input type="hidden" name="p" value="list"><br>
-                            <label>CDRomance</label>
-                              <input type="text" autocomplete="off" id="s" name="s" value="" onfocus="tbFocus(this)" onfocusout="tbFocusEnd(this)"><br>
-                              <input type="submit" value="Search">                       
-                        </form>
-                        
-                    </div>
             </tr>
     
         </table>
 
-        <img detached="false" draggable="false" id="gobackup" class="gobackup" onclick="gobackup()" src="misc_img/gobackup.png">
+        <table class="categorynav" style="margin-top: 25px !important;">
+            <tr>
+                <td class="catnavitm" id=""> <img src="icns_square/ico-hltb.png" onclick="ss_chooseWebsite('hltb')"> <div>HLTB</div> </td>
+                <td class="catnavitm" id=""> <img src="icns_square/ico-pcgw.jpg" onclick="ss_chooseWebsite('pcgw')"> <div>PCGWiki</div> </td>
+                <td class="catnavitm" id=""> <img src="icns_square/ico-pdb.png" onclick="ss_chooseWebsite('pdb')"> <div>ProtonDb</div> </td>
+                <td class="catnavitm" id=""> <img src="icns_square/ico-igdb.jpg" onclick="ss_chooseWebsite('igdb')"> <div>IGDB</div> </td>
+                <td class="catnavitm" id=""> <img src="icns_square/ico-steam.png" onclick="ss_chooseWebsite('st')"> <div>Steam</div> </td>
+                <td class="catnavitm" id=""> <img src="icns_square/ico-gog.png" onclick="ss_chooseWebsite('gog')"> <div>GOG</div> </td>
+            </tr>
+        </table>
+
+
+        <table class="categorynav" style="margin-top: 25px !important;">
+            <tr>
+                <td class="catnavitm" id=""> <img src="icns_square/ico-vimm.png" onclick="ss_chooseWebsite('vimm')"> <div>Vimm's Lair</div> </td>
+                <td class="catnavitm" id=""> <img src="icns_square/ico-cdr.png" onclick="ss_chooseWebsite('cdr')"> <div>CDRomance</div> </td>
+                <td class="catnavitm" id=""> <img src="icns_square/ico-ma.png" onclick="ss_chooseWebsite('ma')"> <div>MyAW</div> </td>
+                <td class="catnavitm" id=""> <img src="icns_square/ico-ag.png" onclick="ss_chooseWebsite('ag')"> <div>AWGames</div> </td>
+            </tr>
+        </table>
+
+
+        <img detached="false" draggable="false" id="gobackup" class="gobackup" onclick="gobackup()" src="img_misc/gobackup.png">
 
     </center>
+
 
 
     <script>
@@ -1055,8 +887,176 @@
 </body>
 
 
+
+
+<style>
+    .searchSystem
+    {
+        background-color: #00000050;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        display: none;
+    }
+
+    .ss-window
+    {
+        padding: 15px;
+        margin-top: 15%;
+        background-color: white;
+        width: 375px;
+        border-style: solid;
+        border-width: 3px;
+        border-color: gray;
+    }
+
+    .ss-WindowLogo
+    {
+        height: 64px;
+        width: 64px;
+    }
+
+    .ss-btnCloseWindow
+    {
+        border-style: none;
+        background: none;
+    }
+
+</style>
+
+
+
+<script>
+    function showSearchSystem(bool)
+    {
+        let ss = document.getElementById('ss')
+        if (bool == true)
+        {
+            ss.style.display = "block"
+        }
+        else if (bool == false)
+        {
+            ss.style.display = "none"
+        }
+    }
+</script>
+
+
+<script>
+
+    var ss_chosenSite = "";
+    const engineUrls = {
+            "7d": "https://us.7digital.com/search?q=",
+            "bp": "https://beatport.com/search?q=",
+            "qb": "https://qobuz.com/us-en/search?q=",
+            "jd": "https://www.junodownload.com/search/?q[all][]=",
+            "jd-a": "https://www.junodownload.com/search/?facet[mirror_artist_facetm][]=",
+            "vimm": "https://vimm.net/vault/?p=list&q=",
+            "cdr": "https://cdromance.com/?p=list&s=",
+            "ma": "https://www.myabandonware.com/search/q/",
+            "ag": "https://abandonwaregames.net/search.php?q=",
+            "pcgw": "https://www.pcgamingwiki.com/w/index.php?search=",
+            "pdb": "https://www.protondb.com/search?q=",
+            "hltb": "https://howlongtobeat.com/?q=",
+            "anime": "https://aniwave.to/filter?keyword=",
+            "igdb": "https://www.igdb.com/search?type=1&q=",
+            "st": "https://store.steampowered.com/search/?term=",
+            "gog": "https://www.gog.com/en/games?query=",
+            "mal": "https://myanimelist.net/search/all?q=",
+            "md": "https://mangadex.org/search?q=",
+            "eb": "https://www.ebay.com/sch/i.html?_nkw=",
+            "amz": "https://www.amazon.com/s?k=",
+            "me": "https://www.mercari.com/search/?keyword=",
+            "pc": "https://picclick.com/?q=",
+            "ggd": "https://gg.deals/games/?title=",
+        }
+
+
+    function ss_chooseWebsite(site)
+    {
+        if (engineUrls[site])
+        {
+            ss_chosenSite = site;
+
+            let ss_chosenSiteComboBox = document.getElementById('ss-siteSelected');
+            ss_chosenSiteComboBox.value = ss_chosenSite;
+
+            console.log("ss_chosenSite: " + ss_chosenSite)
+            showSearchSystem(true);
+        }
+        else
+        {
+            alert("Error setting current search engine.")
+        }
+    }
+
+
+    function ss_Search()
+    {
+        
+        let query = document.getElementById('ss-query');
+        window.location.href = engineUrls[ss_chosenSite] + query.value
+
+    }
+</script>
+
+
+<div class="searchSystem" id="ss">
+    <center>
+        <div class="ss-window">
+
+            <img class="ss-windowLogo" src="img_misc/globe.png">
+
+            <p class="ss-inst">Enter search query below.</p>
+
+            <form>
+
+                <label for="siteSelected">Site: </label>
+                
+                <select id="ss-siteSelected" onchange="ss_chooseWebsite(this.value)">
+                    <option value="7d">7Digital</option>
+                    <option value="bp">Beatport</option>
+                    <option value="qb">Qobuz</option>
+                    <option value="jd">JunoDownload (Release)</option>
+                    <option value="jd-a">JunoDownload (Artist)</option>
+                    <option value="vimm">Vimm's Lair</option>
+                    <option value="cdr">CDRomance</option>
+                    <option value="ma">MyAbandonware</option>
+                    <option value="md">MangaDex</option>
+                    <option value="mal">MyAnimeList</option>
+                    <option value="ag">AbandonwareGames</option>
+                    <option value="anime">Anime</option>
+                    <option value="hltb">HowLongToBeat</option>
+                    <option value="pdb">ProtonDb</option>
+                    <option value="igdb">IGDB</option>
+                    <option value="st">Steam</option>
+                    <option value="gog">GOG</option>
+                    <option value="pcgw">PCGamingWiki</option>
+                    <option value="eb">ebay</option>
+                    <option value="amz">Amazon</option>
+                    <option value="me">Mercari</option>
+                    <option value="pc">PicClick</option>
+                    <option value="ggd">gg.deals</option>
+                </select>
+
+                <input type="text" id="ss-query">
+                <input type="reset" value="Search" onclick="ss_Search()">
+                <br><br><a href="javascript:showSearchSystem(false)">Close</a>
+            </form>
+        </div>
+
+    </center>
+</div>
+
+
+
 <footer style="margin-top: 575px">
 </footer>
+
+
 
 
 </html>
