@@ -796,6 +796,7 @@
             <tr>
                 <td class="catnavitm" id="cn-7d"> <img src="icns_square/ico-7d.png" onclick="ss_chooseWebsite('7d')"> <div>7Digital</div> </td>
                 <td class="catnavitm" id="cn-bp"> <img src="icns_square/ico-bp.png" onclick="ss_chooseWebsite('bp')"> <div>Beatport</div> </td>
+                <td class="catnavitm" id="cn-jd"> <img src="icns_square/ico-ts.png" onclick="ss_chooseWebsite('ts')"> <div>Traxsource</div> </td>
                 <td class="catnavitm" id="cn-qb"> <img src="icns_square/ico-qb.png" onclick="ss_chooseWebsite('qb')"> <div>Qobuz</div>  </td>
                 <td class="catnavitm" id="cn-jd"> <img src="icns_square/ico-jd.jpg" onclick="ss_chooseWebsite('jd')"> <div>JunoDownload</div> </td>
             </tr>
@@ -822,6 +823,7 @@
             <tr>
                 <td class="catnavitm" id=""> <img src="icns_square/ico-pc.png" onclick="ss_chooseWebsite('pc')"> <div>PicClick</div> </td>
                 <td class="catnavitm" id=""> <img src="icns_square/ico-me.jpg" onclick="ss_chooseWebsite('me')"> <div>Mercari</div> </td>
+                <td class="catnavitm" id=""> <img src="icns_square/ico-ali.png" onclick="ss_chooseWebsite('ali')"> <div>AliExpress</div>  </td>
                 <td class="catnavitm" id=""> <img src="icns_square/ico-amz.png" onclick="ss_chooseWebsite('amz')"> <div>Amazon</div>  </td>
                 <td class="catnavitm" id=""> <img src="icns_square/ico-eb.png" onclick="ss_chooseWebsite('eb')"> <div>ebay</div> </td>
                 <td class="catnavitm" id=""> <img src="icns_square/ico-ggd.jpg" onclick="ss_chooseWebsite('ggd')"> <div>gg.deals</div> <a class="catnavitm-option" href="https://gg.deals/wishlist/recent-deals/">Wishlist</a> </td>
@@ -952,6 +954,7 @@
             "7d": "https://us.7digital.com/search?q=",
             "bp": "https://beatport.com/search?q=",
             "qb": "https://qobuz.com/us-en/search?q=",
+            "ts": "https://traxsource.com/search?term=",
             "jd": "https://www.junodownload.com/search/?q[all][]=",
             "jd-a": "https://www.junodownload.com/search/?facet[mirror_artist_facetm][]=",
             "vimm": "https://vimm.net/vault/?p=list&q=",
@@ -972,6 +975,7 @@
             "me": "https://www.mercari.com/search/?keyword=",
             "pc": "https://picclick.com/?q=",
             "ggd": "https://gg.deals/games/?title=",
+            "ali": "https://www.aliexpress.us/w/wholesale-",
         }
 
 
@@ -998,7 +1002,39 @@
     {
         
         let query = document.getElementById('ss-query');
-        window.location.href = engineUrls[ss_chosenSite] + query.value
+
+
+        if (ss_chosenSite == "ali")
+        {
+            let qv = query.value;
+            let split = qv.split(/(\s+)/);
+
+            let newUrl = engineUrls[ss_chosenSite];
+
+            for (let i=0; i<split.length; i++)
+            {
+                newUrl += split[i] + '-';
+            }
+
+            let ss_debug = true;
+            if (ss_debug)
+            {
+                let test = document.createElement('p1');
+                let br = document.createElement('br');
+
+                test.textContent = newUrl;
+                test.style.color = 'white';
+
+                let win = document.getElementById('ss');
+                win.appendChild(test);
+                win.appendChild(br);
+            }
+            window.location.href = engineUrls[ss_chosenSite] + query.value + ".html?g=y"
+        }
+        else
+        {
+            window.location.href = engineUrls[ss_chosenSite] + query.value
+        }
 
     }
 </script>
@@ -1019,6 +1055,7 @@
                 <select id="ss-siteSelected" onchange="ss_chooseWebsite(this.value)">
                     <option value="7d">7Digital</option>
                     <option value="bp">Beatport</option>
+                    <option value="ts">Traxsource</option>
                     <option value="qb">Qobuz</option>
                     <option value="jd">JunoDownload (Release)</option>
                     <option value="jd-a">JunoDownload (Artist)</option>
@@ -1040,6 +1077,7 @@
                     <option value="me">Mercari</option>
                     <option value="pc">PicClick</option>
                     <option value="ggd">gg.deals</option>
+                    <option value="ali">AliExpress</option>
                 </select>
 
                 <input type="text" id="ss-query">
